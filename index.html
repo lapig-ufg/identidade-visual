@@ -172,18 +172,26 @@ body {
 
 /* ══════ LOGO SHOWCASE ══════ */
 .logo-showcase {
-  display: flex; gap: 2rem; align-items: center;
-  justify-content: center; flex-wrap: wrap;
-  padding: 3rem; margin: 2rem 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  padding: 2rem; margin: 2rem 0;
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.05);
   border-radius: 12px;
 }
-.logo-showcase img { height: 48px; opacity: 0.9; }
-.logo-showcase .dark-bg {
-  background: var(--w); padding: 1rem 1.5rem; border-radius: 8px;
+.logo-showcase .logo-item {
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem; border-radius: 8px;
+  min-height: 100px;
 }
-.logo-showcase .dark-bg img { filter: none; }
+.logo-showcase .logo-item.light { background: var(--w); }
+.logo-showcase .logo-item.dark { background: var(--gd); border: 1px solid rgba(255,255,255,0.08); }
+.logo-showcase .logo-item img { max-width: 180px; max-height: 60px; object-fit: contain; }
+.logo-showcase .logo-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.5rem; color: var(--n4); text-align: center;
+  margin-top: 0.5rem; letter-spacing: 0.05em;
+}
 
 /* ══════ DIVIDER ══════ */
 .divider {
@@ -306,17 +314,21 @@ footer .ver {
   <p class="section-desc">Versões oficiais do logotipo em português e inglês, com e sem subtítulo.</p>
 
   <div class="logo-showcase">
-    <div class="dark-bg">
-      <img src="lapig-brand/01-logos/principal/lapig-logo-v1-ptbr-com-subtitulo.png" alt="Logo PT-BR v1" style="width:200px">
+    <div>
+      <div class="logo-item light"><img src="lapig-brand/01-logos/principal/lapig-logo-v1-ptbr-com-subtitulo.png" alt="Logo PT-BR v1"></div>
+      <div class="logo-label">V1 PT-BR · Com subtítulo</div>
     </div>
-    <div class="dark-bg">
-      <img src="lapig-brand/01-logos/principal/lapig-logo-v2-sem-subtitulo.png" alt="Logo v2" style="width:200px">
+    <div>
+      <div class="logo-item light"><img src="lapig-brand/01-logos/principal/lapig-logo-v2-sem-subtitulo.png" alt="Logo v2"></div>
+      <div class="logo-label">V2 · Sem subtítulo</div>
     </div>
-    <div class="dark-bg">
-      <img src="lapig-brand/01-logos/principal/lapig-logo-v1-en-com-subtitulo.png" alt="Logo EN v1" style="width:200px">
+    <div>
+      <div class="logo-item light"><img src="lapig-brand/01-logos/principal/lapig-logo-v1-en-com-subtitulo.png" alt="Logo EN v1"></div>
+      <div class="logo-label">V1 EN · Com subtítulo</div>
     </div>
-    <div style="padding:1rem 1.5rem;border-radius:8px;background:var(--gd);border:1px solid rgba(255,255,255,0.08)">
-      <img src="lapig-brand/01-logos/principal/lapig-logo-v2-en-com-subtitulo.png" alt="Logo EN v2 dark" style="width:200px">
+    <div>
+      <div class="logo-item dark"><img src="lapig-brand/01-logos/principal/lapig-logo-v2-en-com-subtitulo.png" alt="Logo EN v2 dark"></div>
+      <div class="logo-label">V2 EN · Fundo escuro</div>
     </div>
   </div>
 
