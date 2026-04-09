@@ -1,14 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
   <style>
-    text{font-family:sans-serif}
-    .label{font-size:9px;fill:#6B6B65;font-weight:600;letter-spacing:1px}
-    .name{font-size:10px;fill:#2D2D2A;font-weight:700}
-    .hex{font-size:8px;fill:#8A8A82;font-family:monospace}
-    .role{font-size:7.5px;fill:#ABABAA}
-    .title{font-size:14px;fill:#1B3A2A;font-weight:800;letter-spacing:-0.5px}
+    text{font-family:'Exo 2',Arial,sans-serif}
+    .label{font-size:9px;fill:#6B6B65;font-weight:700;letter-spacing:1.5px;font-family:'Exo 2',Arial,sans-serif}
+    .name{font-size:10px;fill:#2D2D2A;font-weight:700;font-family:'DM Sans','Exo 2',Arial,sans-serif}
+    .hex{font-size:8px;fill:#8A8A82;font-family:'JetBrains Mono',Consolas,monospace}
+    .role{font-size:7.5px;fill:#ABABAA;font-family:'DM Sans','Exo 2',Arial,sans-serif}
+    .title{font-size:16px;fill:#1B3A2A;font-weight:800;letter-spacing:-0.5px;font-family:'Exo 2',Arial,sans-serif}
   </style>
   <!-- Background -->
   <rect width="800" height="520" rx="12" fill="#F6F1E7"/>
+  <!-- Curvas de nível como background (textura sutil) -->
+  <g fill="none" stroke="#429B4D" stroke-linecap="round">
+    <path d="M0,50 Q40,35 90,55 Q160,80 240,55 Q310,32 370,60 Q440,88 520,62 Q590,38 660,65 Q730,90 800,60" stroke-width="1.0" opacity="0.06"/>
+    <path d="M0,95 Q45,78 100,100 Q175,128 255,98 Q325,72 390,102 Q460,132 540,105 Q610,78 680,108 Q745,135 800,105" stroke-width="1.2" opacity="0.07"/>
+    <path d="M0,145 Q50,125 110,150 Q185,180 265,150 Q340,122 408,155 Q478,185 558,155 Q628,128 698,158 Q758,182 800,155" stroke-width="0.9" opacity="0.05"/>
+    <path d="M0,195 Q55,175 120,200 Q198,230 278,198 Q352,170 425,202 Q498,232 578,200 Q648,172 718,205 Q772,228 800,200" stroke-width="1.3" opacity="0.07"/>
+    <path d="M0,250 Q48,230 115,255 Q195,285 275,255 Q348,228 420,258 Q492,288 572,258 Q642,230 715,262 Q768,282 800,255" stroke-width="1.0" opacity="0.05"/>
+    <path d="M0,305 Q52,285 125,310 Q205,340 285,310 Q358,282 432,312 Q508,342 588,312 Q658,285 730,315 Q778,335 800,310" stroke-width="1.1" opacity="0.06"/>
+    <path d="M0,360 Q55,340 130,365 Q215,395 295,365 Q368,338 445,368 Q522,398 602,368 Q672,340 745,370 Q785,390 800,365" stroke-width="0.8" opacity="0.05"/>
+    <path d="M0,415 Q48,398 125,420 Q210,448 290,420 Q362,395 438,422 Q515,450 595,422 Q665,395 738,425 Q782,445 800,420" stroke-width="1.2" opacity="0.06"/>
+    <path d="M0,468 Q52,450 128,472 Q215,498 295,472 Q368,448 445,475 Q520,500 600,475 Q670,450 742,478 Q785,495 800,475" stroke-width="0.9" opacity="0.05"/>
+  </g>
   <!-- Title -->
   <text x="32" y="38" class="title">LAPIG — Paleta de Cores / Color Palette</text>
   <text x="32" y="54" class="hex">v1.0.0 · Abril 2026</text>
@@ -76,9 +88,8 @@
   <!-- 60-30-10 bar -->
   <text x="32" y="420" class="label">PROPORÇÃO DE USO / USAGE RATIO (60-30-10)</text>
   <rect x="32" y="430" width="450" height="28" rx="6" fill="#F6F1E7" stroke="#D0D0CC" stroke-width="0.5"/>
-  <rect x="32" y="430" width="270" height="28" rx="6" fill="#F6F1E7" stroke="#D0D0CC" stroke-width="0.5"/>
   <rect x="302" y="430" width="135" height="28" rx="0" fill="#429B4D"/>
-  <rect x="437" y="430" width="45" height="28" rx="0" ry="0" fill="#C4933F"/>
+  <rect x="437" y="430" width="45" height="28" rx="0" fill="#C4933F"/>
   <text x="167" y="448" class="hex" text-anchor="middle" fill="#6B6B65">60% Cream/White</text>
   <text x="370" y="448" class="hex" text-anchor="middle" fill="#FEFEFE">30% Green</text>
   <text x="460" y="448" class="hex" text-anchor="middle" fill="#FEFEFE">10%</text>

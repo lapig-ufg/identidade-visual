@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 138" width="120" height="138">
+  <!-- Hexágono — elemento complementar para moldura de foto, ícone de título ou recorte de imagem -->
+  <!-- NÃO usar como background/pattern de tile. Uso exclusivo: molduras pontuais. -->
+  <polygon points="60,3 114,33 114,93 60,123 6,93 6,33"
+    fill="none" stroke="#429B4D" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Guia de recorte interno (clip-path) -->
+  <polygon points="60,8 110,36 110,90 60,118 10,90 10,36"
+    fill="none" stroke="#429B4D" stroke-width="0.5" opacity="0.2" stroke-dasharray="4,3"/>
+</svg>
