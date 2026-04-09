@@ -13,7 +13,7 @@
   <text x="32" y="38" class="title">LAPIG — Paleta de Cores / Color Palette</text>
   <text x="32" y="54" class="hex">v1.0.0 · Abril 2026</text>
   <!-- Primary -->
-  <text x="32" y="90" class="label">PRIMARIAS / PRIMARY</text>
+  <text x="32" y="90" class="label">PRIMÁRIAS / PRIMARY</text>
   <rect x="32" y="100" width="120" height="72" rx="8" fill="#429B4D"/>
   <text x="32" y="192" class="name">Cerrado Green</text>
   <text x="32" y="204" class="hex">#429B4D · RGB 66,155,77</text>
@@ -21,13 +21,13 @@
   <rect x="172" y="100" width="120" height="72" rx="8" fill="#1B3A2A"/>
   <text x="172" y="192" class="name">Deep Forest</text>
   <text x="172" y="204" class="hex">#1B3A2A · RGB 27,58,42</text>
-  <text x="172" y="216" class="role">Fundos escuros, titulos</text>
+  <text x="172" y="216" class="role">Fundos escuros, títulos</text>
   <rect x="312" y="100" width="120" height="72" rx="8" fill="#F6F1E7" stroke="#D0D0CC" stroke-width="1"/>
   <text x="312" y="192" class="name">Cream</text>
   <text x="312" y="204" class="hex">#F6F1E7 · RGB 246,241,231</text>
-  <text x="312" y="216" class="role">Fundo padrao claro</text>
+  <text x="312" y="216" class="role">Fundo padrão claro</text>
   <!-- Secondary -->
-  <text x="32" y="252" class="label">SECUNDARIAS / SECONDARY</text>
+  <text x="32" y="252" class="label">SECUNDÁRIAS / SECONDARY</text>
   <rect x="32" y="262" width="120" height="72" rx="8" fill="#2A9D8F"/>
   <text x="32" y="354" class="name">Tech Teal</text>
   <text x="32" y="366" class="hex">#2A9D8F · RGB 42,157,143</text>
@@ -74,7 +74,7 @@
   <rect x="680" y="380" width="90" height="36" rx="6" fill="url(#g3)"/>
   <text x="685" y="430" class="hex">Golden Hour</text>
   <!-- 60-30-10 bar -->
-  <text x="32" y="420" class="label">PROPORCAO DE USO / USAGE RATIO (60-30-10)</text>
+  <text x="32" y="420" class="label">PROPORÇÃO DE USO / USAGE RATIO (60-30-10)</text>
   <rect x="32" y="430" width="450" height="28" rx="6" fill="#F6F1E7" stroke="#D0D0CC" stroke-width="0.5"/>
   <rect x="32" y="430" width="270" height="28" rx="6" fill="#F6F1E7" stroke="#D0D0CC" stroke-width="0.5"/>
   <rect x="302" y="430" width="135" height="28" rx="0" fill="#429B4D"/>
