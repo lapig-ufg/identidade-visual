@@ -1,0 +1,46 @@
+name: "Reportar inconsistência"
+description: "Reportar um erro ou inconsistência nos materiais de marca"
+title: "[Inconsistência] "
+labels: ["bug", "inconsistência"]
+body:
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo de inconsistência
+      description: Qual tipo de problema você encontrou?
+      options:
+        - Cor incorreta (fora da paleta oficial)
+        - Tipografia incorreta (fonte errada)
+        - Logo mal aplicado
+        - Ortografia ou gramática
+        - Link quebrado
+        - Curvas de nível se cruzando
+        - Hexágono usado como background
+        - Informação desatualizada
+        - Outro
+    validations:
+      required: true
+  - type: input
+    id: arquivo
+    attributes:
+      label: Arquivo afetado
+      description: Em qual arquivo ou página está o problema?
+      placeholder: "Ex.: lapig-brand/04-templates/apresentacao/ptbr/template-apresentacao.html"
+    validations:
+      required: true
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição do problema
+      description: Descreva o erro encontrado e, se possível, o que deveria ser o correto.
+      placeholder: "Ex.: No cartão de visita, o verde utilizado é #3D9B4D em vez do oficial #429B4D."
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Anexe uma captura de tela mostrando o problema (opcional).
+      placeholder: "Cole a imagem aqui..."
+    validations:
+      required: false

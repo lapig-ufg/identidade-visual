@@ -1,0 +1,62 @@
+name: "Sugestão de alteração"
+description: "Propor uma mudança na identidade visual do LAPIG"
+title: "[Sugestão] "
+labels: ["sugestão", "aguardando análise"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área afetada
+      description: Qual parte da identidade visual esta sugestão afeta?
+      options:
+        - Logotipo
+        - Paleta de cores
+        - Tipografia
+        - Curvas de nível (background)
+        - Hexágonos (molduras)
+        - Templates — Apresentação
+        - Templates — Redes sociais
+        - Templates — Papelaria
+        - Templates — Sinalização
+        - Sub-marcas
+        - Regras de co-branding
+        - Manual (texto/conteúdo)
+        - Outro
+    validations:
+      required: true
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição da sugestão
+      description: Descreva com clareza o que você gostaria de alterar e por quê.
+      placeholder: "Ex.: Sugiro alterar a opacidade das curvas de nível de 20% para 30% nos templates de apresentação, pois no projetor ficam pouco visíveis."
+    validations:
+      required: true
+  - type: textarea
+    id: referencia
+    attributes:
+      label: Referência visual
+      description: Anexe imagens, screenshots ou links que ilustrem a sugestão (opcional).
+      placeholder: "Cole imagens ou links aqui..."
+    validations:
+      required: false
+  - type: dropdown
+    id: impacto
+    attributes:
+      label: Nível de impacto
+      description: Qual o impacto desta mudança no sistema visual?
+      options:
+        - Baixo — ajuste pontual em um template
+        - Médio — afeta múltiplos materiais
+        - Alto — mudança estrutural na identidade
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Confirmações
+      options:
+        - label: Li o manual de marca antes de fazer esta sugestão
+          required: true
+        - label: Esta sugestão não conflita com as diretrizes da UFG
+          required: false

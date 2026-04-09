@@ -206,6 +206,34 @@ footer .ver {
   font-size: 0.62rem;
 }
 
+/* ══════ FILE LIST ══════ */
+.file-list {
+  margin-top: 2rem; padding: 1.5rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 10px;
+}
+.file-list-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem; font-weight: 600;
+  color: var(--n4); letter-spacing: 0.08em;
+  text-transform: uppercase; margin-bottom: 0.75rem;
+}
+.file-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.4rem;
+}
+.file-item {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem; color: rgba(255,255,255,0.4);
+  text-decoration: none; padding: 0.4rem 0.6rem;
+  border-radius: 5px; transition: all 0.15s;
+}
+.file-item:hover { background: rgba(255,255,255,0.04); color: var(--teal); }
+.file-item svg { flex-shrink: 0; opacity: 0.5; }
+.file-item:hover svg { opacity: 1; }
+
 /* ══════ RESPONSIVE ══════ */
 @media (max-width: 640px) {
   .hero { padding: 3rem 1.5rem; }
@@ -289,6 +317,21 @@ footer .ver {
     </div>
     <div style="padding:1rem 1.5rem;border-radius:8px;background:var(--gd);border:1px solid rgba(255,255,255,0.08)">
       <img src="lapig-brand/01-logos/principal/lapig-logo-v2-en-com-subtitulo.png" alt="Logo EN v2 dark" style="height:56px">
+    </div>
+  </div>
+
+  <!-- Downloads individuais -->
+  <div class="file-list">
+    <div class="file-list-title">Arquivos disponíveis — 01-logos/principal/</div>
+    <div class="file-grid">
+      <a href="lapig-brand/01-logos/principal/lapig-logo-v1-ptbr-com-subtitulo.svg" class="file-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>v1-ptbr-com-subtitulo.svg</a>
+      <a href="lapig-brand/01-logos/principal/lapig-logo-v1-ptbr-com-subtitulo.png" class="file-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>v1-ptbr-com-subtitulo.png</a>
+      <a href="lapig-brand/01-logos/principal/lapig-logo-v2-sem-subtitulo.svg" class="file-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>v2-sem-subtitulo.svg</a>
+      <a href="lapig-brand/01-logos/principal/lapig-logo-v2-sem-subtitulo.png" class="file-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>v2-sem-subtitulo.png</a>
+      <a href="lapig-brand/01-logos/principal/lapig-logo-v1-en-com-subtitulo.svg" class="file-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>v1-en-com-subtitulo.svg</a>
+      <a href="lapig-brand/01-logos/principal/lapig-logo-v1-en-com-subtitulo.png" class="file-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>v1-en-com-subtitulo.png</a>
+      <a href="lapig-brand/01-logos/principal/lapig-logo-v2-en-com-subtitulo.svg" class="file-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>v2-en-com-subtitulo.svg</a>
+      <a href="lapig-brand/01-logos/principal/lapig-logo-v2-en-com-subtitulo.png" class="file-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>v2-en-com-subtitulo.png</a>
     </div>
   </div>
 </section>

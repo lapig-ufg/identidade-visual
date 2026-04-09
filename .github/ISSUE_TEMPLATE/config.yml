@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Manual de Marca (PT-BR)
+    url: https://lapig-ufg.github.io/identidade-visual/lapig-brand/00-manual/manual-marca-lapig-v1.0.0-ptbr.html
+    about: Consulte o manual completo antes de abrir uma issue
+  - name: Brand Manual (EN)
+    url: https://lapig-ufg.github.io/identidade-visual/lapig-brand/00-manual/lapig-brand-manual-v1.0.0-en.html
+    about: Check the full brand manual before opening an issue
