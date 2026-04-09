@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 138" width="120" height="138">
   <!-- Hexágono para fundo escuro — moldura de foto, ícone ou recorte -->
   <!-- NÃO usar como background/pattern de tile. -->
-  <polygon points="60,3 114,33 114,93 60,123 6,93 6,33"
-    fill="none" stroke="#FEFEFE" stroke-width="2.5" stroke-linejoin="round"/>
-  <polygon points="60,8 110,36 110,90 60,118 10,90 10,36"
+  <path d="M 53,6.9 Q 60,3 67,6.9 L 107,29.1 Q 114,33 114,41 L 114,85 Q 114,93 107,96.9 L 67,119.1 Q 60,123 53,119.1 L 13,96.9 Q 6,93 6,85 L 6,41 Q 6,33 13,29.1 Z"
+    fill="none" stroke="#FEFEFE" stroke-width="2.5"/>
+  <path d="M 54.8,10.9 Q 60,8 65.2,10.9 L 104.8,33.1 Q 110,36 110,42 L 110,84 Q 110,90 104.8,92.9 L 65.2,115.1 Q 60,118 54.8,115.1 L 15.2,92.9 Q 10,90 10,84 L 10,42 Q 10,36 15.2,33.1 Z"
     fill="none" stroke="#FEFEFE" stroke-width="0.5" opacity="0.2" stroke-dasharray="4,3"/>
 </svg>
