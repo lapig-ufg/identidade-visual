@@ -104,11 +104,22 @@ body{font-family:'DM Sans',sans-serif;background:#d5d0c6;display:flex;flex-wrap:
 <div class="label">Adesivo hexagonal</div>
 <div class="sticker">
   <svg viewBox="0 0 80 92">
+    <!-- Hexágono verde -->
     <polygon points="40,2 76,24 76,68 40,90 4,68 4,24" fill="#429B4D"/>
-    <circle cx="40" cy="42" r="18" fill="none" stroke="#FEFEFE" stroke-width="1.8"/>
-    <path d="M33,30 Q36,36 34,42 Q32,48 34,54" fill="none" stroke="#FEFEFE" stroke-width="1.2" stroke-linecap="round"/>
-    <path d="M43,28 Q46,34 45,42 Q44,50 47,55" fill="none" stroke="#FEFEFE" stroke-width="1.2" stroke-linecap="round"/>
-    <ellipse cx="40" cy="42" rx="18" ry="6.5" fill="none" stroke="#FEFEFE" stroke-width="0.6" opacity="0.4"/>
+    <!-- Globo: círculo branco + continentes verdes (fiel ao logo oficial) -->
+    <circle cx="40" cy="44" r="17" fill="#FEFEFE"/>
+    <circle cx="40" cy="44" r="17" fill="none" stroke="#373435" stroke-width="0.8"/>
+    <!-- América do Sul (forma principal, destaque) -->
+    <path d="M36,44 Q35,41 36,38 Q37,36 38,35 L39,35 Q40,36 40,38 Q41,40 40,42 Q40,44 39,46 Q38,49 37,51 Q36,53 35,54 L34,53 Q34,51 35,48 Q35,46 36,44 Z" fill="#429B4D"/>
+    <!-- América do Norte (parcial, canto superior esquerdo) -->
+    <path d="M32,34 Q30,33 29,32 Q28,30 30,29 Q32,28 34,29 Q36,30 37,31 Q38,32 37,33 Q36,34 34,34 Z" fill="#429B4D"/>
+    <!-- América Central -->
+    <path d="M34,35 Q35,35 36,36 Q35,37 34,37 Q33,36 34,35 Z" fill="#429B4D"/>
+    <!-- Europa/África (canto direito) -->
+    <path d="M46,33 Q47,32 48,33 Q49,34 49,36 Q48,37 47,37 Q46,36 46,35 Z" fill="#429B4D"/>
+    <path d="M47,38 Q48,39 48,41 Q48,43 47,45 Q46,47 45,48 Q44,48 44,46 Q45,44 45,42 Q46,40 47,38 Z" fill="#429B4D"/>
+    <!-- Wordmark LAPIG abaixo do globo -->
+    <text x="40" y="72" text-anchor="middle" fill="#FEFEFE" font-family="'Exo 2',Arial,sans-serif" font-size="7" font-weight="800" letter-spacing="-0.3">LAPIG</text>
   </svg>
 </div>
 </div>
