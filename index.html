@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LAPIG — Manual de Marca</title>
+<meta name="description" content="Sistema de identidade visual do LAPIG — Laboratório de Processamento de Imagens e Geoprocessamento · IESA/UFG">
+<meta property="og:title" content="LAPIG — Manual de Marca">
+<meta property="og:description" content="Sistema de identidade visual do LAPIG · IESA · Universidade Federal de Goiás">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --g: #429B4D; --gd: #1B3A2A; --gl: #6DB56A;
+  --teal: #2A9D8F; --gold: #C4933F; --gold-l: #D4A84B;
+  --brown: #6B4C3B; --cream: #F6F1E7;
+  --n9: #1A1A18; --n7: #404040; --n5: #6B6B65; --n4: #8A8A82;
+  --n3: #ABABAA; --n2: #D0D0CC; --n1: #ECECEA; --w: #FEFEFE;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: var(--gd); color: var(--w);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ══════ CONTOUR BACKGROUND ══════ */
+.contour-bg {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cg fill='none' stroke='%23429B4D' stroke-linecap='round'%3E%3Cpath d='M0,30 Q40,10 90,35 Q160,70 240,40 Q310,15 370,50 Q440,90 520,55 Q590,25 660,60 Q730,90 800,50' stroke-width='1.0' opacity='0.06'/%3E%3Cpath d='M0,60 Q45,38 100,65 Q175,100 255,68 Q325,40 390,78 Q460,118 540,82 Q610,50 680,88 Q745,118 800,78' stroke-width='1.2' opacity='0.07'/%3E%3Cpath d='M0,88 Q50,65 110,95 Q185,132 265,98 Q340,65 408,105 Q478,145 558,108 Q628,75 698,112 Q758,142 800,105' stroke-width='0.9' opacity='0.06'/%3E%3Cpath d='M0,115 Q55,90 120,122 Q198,162 278,125 Q352,90 425,132 Q498,172 578,135 Q648,100 718,138 Q772,165 800,132' stroke-width='1.4' opacity='0.08'/%3E%3Cpath d='M0,142 Q48,118 115,148 Q195,188 275,152 Q348,118 420,158 Q492,198 572,162 Q642,128 715,165 Q768,190 800,158' stroke-width='0.8' opacity='0.05'/%3E%3Cpath d='M0,168 Q52,142 125,175 Q205,218 285,178 Q358,142 432,185 Q508,228 588,188 Q658,152 730,192 Q778,218 800,185' stroke-width='1.3' opacity='0.07'/%3E%3Cpath d='M0,198 Q55,170 130,205 Q215,248 295,208 Q368,172 445,215 Q522,258 602,218 Q672,182 745,220 Q785,245 800,215' stroke-width='1.0' opacity='0.06'/%3E%3Cpath d='M0,228 Q48,200 125,232 Q210,275 290,235 Q362,198 438,242 Q515,285 595,245 Q665,208 738,248 Q782,272 800,242' stroke-width='1.5' opacity='0.08'/%3E%3Cpath d='M0,255 Q52,228 128,260 Q215,302 295,262 Q368,225 445,268 Q520,310 600,270 Q670,235 742,275 Q785,298 800,268' stroke-width='0.9' opacity='0.05'/%3E%3Cpath d='M0,282 Q55,255 132,288 Q220,330 300,290 Q375,252 452,295 Q528,338 608,298 Q678,262 748,302 Q788,325 800,295' stroke-width='1.2' opacity='0.07'/%3E%3Cpath d='M0,340 Q52,312 135,345 Q222,388 302,348 Q378,310 455,352 Q532,395 612,355 Q682,318 752,358 Q790,380 800,352' stroke-width='1.4' opacity='0.06'/%3E%3Cpath d='M0,398 Q48,372 128,400 Q212,440 292,402 Q365,368 440,408 Q515,448 595,410 Q665,375 738,412 Q782,435 800,408' stroke-width='1.0' opacity='0.05'/%3E%3Cpath d='M0,455 Q55,430 132,458 Q218,495 298,460 Q372,428 448,465 Q525,500 605,468 Q675,435 748,468 Q788,488 800,465' stroke-width='1.3' opacity='0.06'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+
+/* ══════ LAYOUT ══════ */
+.page { position: relative; z-index: 1; }
+
+/* ══════ HERO ══════ */
+.hero {
+  min-height: 100vh; display: flex; flex-direction: column;
+  justify-content: center; align-items: center; text-align: center;
+  padding: 4rem 2rem;
+}
+.hero-logo { margin-bottom: 2.5rem; }
+.hero-logo img { height: 64px; filter: brightness(0) invert(1); }
+.hero-overline {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem; font-weight: 600;
+  color: var(--gold-l); letter-spacing: 0.2em;
+  text-transform: uppercase; margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.hero-overline::before, .hero-overline::after {
+  content: ''; width: 32px; height: 1px; background: var(--gold);
+  opacity: 0.4;
+}
+.hero h1 {
+  font-family: 'Exo 2', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900; line-height: 0.95;
+  letter-spacing: -0.04em; max-width: 700px;
+  margin-bottom: 1.5rem;
+}
+.hero h1 span { color: var(--gl); font-weight: 300; font-style: italic; }
+.hero-sub {
+  font-size: 1.05rem; color: rgba(255,255,255,0.45);
+  max-width: 480px; line-height: 1.65; margin-bottom: 3rem;
+}
+.hero-tagline {
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic; font-size: 1.15rem;
+  color: var(--gold); opacity: 0.7;
+  margin-bottom: 3.5rem;
+}
+.hero-meta {
+  display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem; color: rgba(255,255,255,0.25);
+}
+.hero-meta span { display: flex; align-items: center; gap: 0.35rem; }
+.hero-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
+
+/* ══════ SECTION ══════ */
+.section {
+  max-width: 1100px; margin: 0 auto;
+  padding: 5rem 2rem;
+}
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem; font-weight: 600;
+  color: var(--teal); letter-spacing: 0.18em;
+  text-transform: uppercase; margin-bottom: 0.5rem;
+}
+.section-title {
+  font-family: 'Exo 2', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800; letter-spacing: -0.03em;
+  color: var(--w); margin-bottom: 0.6rem; line-height: 1.1;
+}
+.section-desc {
+  font-size: 0.95rem; color: rgba(255,255,255,0.4);
+  max-width: 560px; line-height: 1.7; margin-bottom: 3rem;
+}
+
+/* ══════ CARD GRID ══════ */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+.card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px; padding: 2rem;
+  transition: all 0.3s ease; position: relative;
+  overflow: hidden; text-decoration: none; color: inherit;
+  display: flex; flex-direction: column;
+}
+.card:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(66,155,77,0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+.card-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; margin-bottom: 1.25rem; flex-shrink: 0;
+}
+.card-icon.green { background: rgba(66,155,77,0.12); }
+.card-icon.gold { background: rgba(196,147,63,0.12); }
+.card-icon.teal { background: rgba(42,157,143,0.12); }
+.card-title {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.05rem; font-weight: 700;
+  color: var(--w); margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+.card-desc {
+  font-size: 0.82rem; color: rgba(255,255,255,0.35);
+  line-height: 1.55; flex: 1;
+}
+.card-tag {
+  display: inline-block; margin-top: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--teal); padding: 0.2rem 0.5rem;
+  background: rgba(42,157,143,0.08); border-radius: 4px;
+}
+.card-arrow {
+  position: absolute; top: 1.5rem; right: 1.5rem;
+  font-size: 1rem; color: rgba(255,255,255,0.1);
+  transition: all 0.3s;
+}
+.card:hover .card-arrow { color: var(--g); transform: translate(3px, -3px); }
+
+/* ══════ COLOR BAR ══════ */
+.color-bar {
+  display: flex; height: 56px; border-radius: 10px;
+  overflow: hidden; margin: 2rem 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+.color-bar div {
+  flex: 1; display: flex; align-items: flex-end;
+  padding: 0.4rem 0.6rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.5rem; color: rgba(255,255,255,0.7);
+}
+
+/* ══════ LOGO SHOWCASE ══════ */
+.logo-showcase {
+  display: flex; gap: 2rem; align-items: center;
+  justify-content: center; flex-wrap: wrap;
+  padding: 3rem; margin: 2rem 0;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+}
+.logo-showcase img { height: 48px; opacity: 0.9; }
+.logo-showcase .dark-bg {
+  background: var(--w); padding: 1rem 1.5rem; border-radius: 8px;
+}
+.logo-showcase .dark-bg img { filter: none; }
+
+/* ══════ DIVIDER ══════ */
+.divider {
+  max-width: 1100px; margin: 0 auto;
+  height: 1px; background: linear-gradient(90deg, transparent, rgba(66,155,77,0.15), transparent);
+}
+
+/* ══════ FOOTER ══════ */
+footer {
+  max-width: 1100px; margin: 0 auto;
+  padding: 3rem 2rem;
+  display: flex; justify-content: space-between;
+  align-items: center; flex-wrap: wrap; gap: 1rem;
+  font-size: 0.75rem; color: rgba(255,255,255,0.2);
+}
+footer a { color: var(--teal); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+footer .ver {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+}
+
+/* ══════ RESPONSIVE ══════ */
+@media (max-width: 640px) {
+  .hero { padding: 3rem 1.5rem; }
+  .section { padding: 3rem 1.5rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  .logo-showcase { flex-direction: column; }
+  footer { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- Background fixo com curvas de nível -->
+<div class="contour-bg"></div>
+
+<div class="page">
+
+<!-- ══════ HERO ══════ -->
+<header class="hero">
+  <div class="hero-logo">
+    <img src="lapig-brand/01-logos/principal/lapig-logo-v2-sem-subtitulo.png" alt="LAPIG">
+  </div>
+  <div class="hero-overline">Manual de Identidade Visual</div>
+  <h1>Manual de Marca <span>LAPIG</span></h1>
+  <p class="hero-sub">
+    Laboratório de Processamento de Imagens e Geoprocessamento<br>
+    Instituto de Estudos Socioambientais · Universidade Federal de Goiás
+  </p>
+  <div class="hero-tagline">Ciência que enxerga o território</div>
+  <div class="hero-meta">
+    <span><div class="dot"></div>Versão 1.0.0</span>
+    <span><div class="dot"></div>Abril 2026</span>
+    <span><div class="dot"></div>Desde 1994</span>
+    <span><div class="dot"></div>30+ anos</span>
+  </div>
+</header>
+
+<div class="divider"></div>
+
+<!-- ══════ MANUAL ══════ -->
+<section class="section">
+  <div class="section-label">00 — Manual Completo</div>
+  <h2 class="section-title">Manual de Marca</h2>
+  <p class="section-desc">Documento completo com todas as diretrizes de identidade visual, versões em português e inglês.</p>
+
+  <div class="card-grid" style="grid-template-columns: 1fr 1fr;">
+    <a href="lapig-brand/00-manual/manual-marca-lapig-v1.0.0-ptbr.html" class="card">
+      <div class="card-arrow">↗</div>
+      <div class="card-icon green">📖</div>
+      <div class="card-title">Manual de Marca — PT-BR</div>
+      <div class="card-desc">9 capítulos: plataforma de marca, logotipo, cores, tipografia, elementos gráficos, aplicações, sub-marcas, uso bilíngue e governança.</div>
+      <div class="card-tag">Português</div>
+    </a>
+    <a href="lapig-brand/00-manual/lapig-brand-manual-v1.0.0-en.html" class="card">
+      <div class="card-arrow">↗</div>
+      <div class="card-icon teal">📖</div>
+      <div class="card-title">Brand Manual — EN</div>
+      <div class="card-desc">Full 9-chapter brand manual in English: brand platform, logo, colors, typography, graphic elements, applications, sub-brands, bilingual usage and governance.</div>
+      <div class="card-tag">English</div>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════ LOGOS ══════ -->
+<section class="section">
+  <div class="section-label">01 — Logotipos</div>
+  <h2 class="section-title">Sistema de Logotipos</h2>
+  <p class="section-desc">Versões oficiais do logotipo em português e inglês, com e sem subtítulo.</p>
+
+  <div class="logo-showcase">
+    <div class="dark-bg">
+      <img src="lapig-brand/01-logos/principal/lapig-logo-v1-ptbr-com-subtitulo.png" alt="Logo PT-BR v1" style="height:56px">
+    </div>
+    <div class="dark-bg">
+      <img src="lapig-brand/01-logos/principal/lapig-logo-v2-sem-subtitulo.png" alt="Logo v2" style="height:56px">
+    </div>
+    <div class="dark-bg">
+      <img src="lapig-brand/01-logos/principal/lapig-logo-v1-en-com-subtitulo.png" alt="Logo EN v1" style="height:56px">
+    </div>
+    <div style="padding:1rem 1.5rem;border-radius:8px;background:var(--gd);border:1px solid rgba(255,255,255,0.08)">
+      <img src="lapig-brand/01-logos/principal/lapig-logo-v2-en-com-subtitulo.png" alt="Logo EN v2 dark" style="height:56px">
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════ CORES ══════ -->
+<section class="section">
+  <div class="section-label">02 — Cores</div>
+  <h2 class="section-title">Paleta Cromática</h2>
+  <p class="section-desc">Verde institucional do Cerrado, acentos tecnológicos e tons terrosos.</p>
+
+  <div class="color-bar">
+    <div style="background:#429B4D">#429B4D</div>
+    <div style="background:#1B3A2A">#1B3A2A</div>
+    <div style="background:#2A9D8F">#2A9D8F</div>
+    <div style="background:#C4933F">#C4933F</div>
+    <div style="background:#6B4C3B">#6B4C3B</div>
+    <div style="background:#F6F1E7;color:#6B6B65">#F6F1E7</div>
+  </div>
+
+  <a href="lapig-brand/02-cores/paleta-referencia.svg" class="card" style="max-width:400px">
+    <div class="card-arrow">↗</div>
+    <div class="card-icon gold">🎨</div>
+    <div class="card-title">Paleta de Referência</div>
+    <div class="card-desc">Cartão SVG com todas as cores, valores HEX/RGB/CMYK, Pantone e proporção de uso.</div>
+    <div class="card-tag">SVG</div>
+  </a>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════ TEMPLATES ══════ -->
+<section class="section">
+  <div class="section-label">04 — Templates</div>
+  <h2 class="section-title">Templates de Aplicação</h2>
+  <p class="section-desc">Mockups HTML interativos para apresentações, redes sociais, papelaria e sinalização.</p>
+
+  <div class="card-grid">
+    <a href="lapig-brand/04-templates/apresentacao/ptbr/template-apresentacao.html" class="card">
+      <div class="card-arrow">↗</div>
+      <div class="card-icon green">📊</div>
+      <div class="card-title">Apresentação 16:9</div>
+      <div class="card-desc">4 tipos de slide: capa, conteúdo, dados e encerramento. Com curvas de nível como background.</div>
+      <div class="card-tag">Slides</div>
+    </a>
+    <a href="lapig-brand/04-templates/social-media/ptbr/instagram-feed.html" class="card">
+      <div class="card-arrow">↗</div>
+      <div class="card-icon teal">📱</div>
+      <div class="card-title">Instagram Feed</div>
+      <div class="card-desc">3 variantes: evento (LAPIG Connect), dados de impacto e curso (GeoCursos).</div>
+      <div class="card-tag">Social Media</div>
+    </a>
+    <a href="lapig-brand/04-templates/papelaria/ptbr/cartao-visita.html" class="card">
+      <div class="card-arrow">↗</div>
+      <div class="card-icon gold">💳</div>
+      <div class="card-title">Cartão de Visita</div>
+      <div class="card-desc">Frente e verso com logo oficial, curvas de nível e dados de contato.</div>
+      <div class="card-tag">Papelaria</div>
+    </a>
+    <a href="lapig-brand/04-templates/papelaria/ptbr/assinatura-email.html" class="card">
+      <div class="card-arrow">↗</div>
+      <div class="card-icon green">✉️</div>
+      <div class="card-title">Assinatura de E-mail</div>
+      <div class="card-desc">HTML compatível com clientes de e-mail corporativos. Pronto para copiar e colar.</div>
+      <div class="card-tag">E-mail</div>
+    </a>
+    <a href="lapig-brand/05-assets/mockups/sinalizacao.html" class="card">
+      <div class="card-arrow">↗</div>
+      <div class="card-icon teal">🏢</div>
+      <div class="card-title">Sinalização Física</div>
+      <div class="card-desc">Placa de porta, roll-up banner, camiseta e adesivo hexagonal.</div>
+      <div class="card-tag">Físico</div>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════ ASSETS ══════ -->
+<section class="section">
+  <div class="section-label">05 — Assets</div>
+  <h2 class="section-title">Elementos Gráficos</h2>
+  <p class="section-desc">Patterns SVG de curvas de nível (background) e hexágonos (molduras). Prontos para uso em qualquer ferramenta.</p>
+
+  <div class="card-grid">
+    <a href="lapig-brand/05-assets/patterns/contour-lines.svg" class="card">
+      <div class="card-arrow">↗</div>
+      <div class="card-icon green">〰️</div>
+      <div class="card-title">Curvas de Nível — Verde</div>
+      <div class="card-desc">Background principal da marca. Linhas topográficas com ondulações acentuadas que nunca se cruzam.</div>
+      <div class="card-tag">Background · SVG</div>
+    </a>
+    <a href="lapig-brand/05-assets/patterns/contour-lines-gold.svg" class="card">
+      <div class="card-arrow">↗</div>
+      <div class="card-icon gold">〰️</div>
+      <div class="card-title">Curvas de Nível — Dourado</div>
+      <div class="card-desc">Variante em dourado para fundos escuros e contextos terrosos.</div>
+      <div class="card-tag">Background · SVG</div>
+    </a>
+    <a href="lapig-brand/05-assets/patterns/hexagon-grid.svg" class="card">
+      <div class="card-arrow">↗</div>
+      <div class="card-icon teal">⬡</div>
+      <div class="card-title">Grid Hexagonal — Claro</div>
+      <div class="card-desc">Hexágonos para recortes de imagem, molduras e ícones. Não usar como background.</div>
+      <div class="card-tag">Moldura · SVG</div>
+    </a>
+    <a href="lapig-brand/05-assets/patterns/hexagon-grid-dark.svg" class="card">
+      <div class="card-arrow">↗</div>
+      <div class="card-icon teal">⬡</div>
+      <div class="card-title">Grid Hexagonal — Escuro</div>
+      <div class="card-desc">Versão para fundos escuros. Uso exclusivo como moldura ou recorte.</div>
+      <div class="card-tag">Moldura · SVG</div>
+    </a>
+    <a href="lapig-brand/05-assets/patterns/hex-contour-combined.svg" class="card">
+      <div class="card-arrow">↗</div>
+      <div class="card-icon gold">◈</div>
+      <div class="card-title">Composição Completa</div>
+      <div class="card-desc">Curvas de nível + hexágonos pontuais. Referência visual do sistema gráfico completo.</div>
+      <div class="card-tag">Referência · SVG</div>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════ FOOTER ══════ -->
+<footer>
+  <div>
+    LAPIG · Laboratório de Processamento de Imagens e Geoprocessamento<br>
+    IESA · Universidade Federal de Goiás · Desde 1994<br>
+    <a href="https://lapig.iesa.ufg.br" target="_blank">lapig.iesa.ufg.br</a>
+  </div>
+  <div class="ver">Manual de Marca v1.0.0 · Abril 2026</div>
+</footer>
+
+</div><!-- .page -->
+
+</body>
+</html>

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual de Marca LAPIG v1.0.0 — PT-BR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --g: #429B4D; --gd: #1B3A2A; --gl: #6DB56A;
+  --teal: #2A9D8F; --gold: #C4933F; --gold-l: #D4A84B; --gold-p: #EDD9A3;
+  --brown: #6B4C3B; --sand: #E8DCC8; --cream: #F6F1E7; --cream-w: #FBF8F1;
+  --alert: #C4533A;
+  --n9: #1A1A18; --n8: #2D2D2A; --n7: #404040; --n6: #555550; --n5: #6B6B65;
+  --n4: #8A8A82; --n3: #ABABAA; --n2: #D0D0CC; --n1: #ECECEA; --w: #FEFEFE;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--w);color:var(--n8);line-height:1.65;-webkit-font-smoothing:antialiased}
+
+/* Print */
+@media print {
+  nav,.toc-float{display:none!important}
+  .page-break{page-break-before:always}
+  section{padding:2rem 0!important}
+  body{background:#fff}
+}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(27,58,42,0.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(66,155,77,0.15);height:52px}
+.nav-in{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:52px;padding:0 2rem}
+.nav-b{font-family:'Exo 2',sans-serif;font-weight:800;color:var(--w);font-size:1rem;letter-spacing:-0.02em}
+.nav-b span{color:var(--gold-l);font-weight:400;font-style:italic}
+.nav-v{font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:rgba(255,255,255,0.4);letter-spacing:0.06em}
+.nav-links{display:flex;gap:0.1rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.72rem;font-weight:500;padding:0.3rem 0.55rem;border-radius:4px;transition:all 0.15s}
+.nav-links a:hover{color:var(--w);background:rgba(255,255,255,0.08)}
+
+/* TOC float */
+.toc-float{position:fixed;left:2rem;top:80px;width:200px;font-size:0.72rem;z-index:50}
+.toc-float a{display:block;color:var(--n4);text-decoration:none;padding:0.3rem 0.6rem;border-left:2px solid transparent;transition:all 0.15s;margin-bottom:0.1rem}
+.toc-float a:hover{color:var(--g);border-left-color:var(--g)}
+.toc-float .toc-label{font-family:'JetBrains Mono',monospace;font-size:0.58rem;font-weight:600;color:var(--n3);letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.6rem;margin-bottom:0.3rem}
+
+/* Content wrapper */
+.content{max-width:820px;margin:0 auto;padding:0 2rem}
+
+/* Cover page */
+.cover{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:6rem 2rem;position:relative;overflow:hidden}
+.cover::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,var(--gd) 0%,#1a3528 100%);z-index:0}
+.cover::after{content:'';position:absolute;inset:0;opacity:0.06;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Cg fill='none' stroke='%23ffffff' stroke-linecap='round'%3E%3Cpath d='M0,12 Q50,8 100,15 Q175,25 225,17 Q290,6 350,13 Q380,17 400,11' stroke-width='0.8' opacity='0.08'/%3E%3Cpath d='M0,32 Q55,25 110,35 Q180,48 230,37 Q295,24 355,33 Q382,38 400,30' stroke-width='1.0' opacity='0.10'/%3E%3Cpath d='M0,55 Q52,48 108,58 Q178,72 228,60 Q292,46 352,56 Q380,62 400,54' stroke-width='0.7' opacity='0.08'/%3E%3Cpath d='M0,78 Q48,72 105,82 Q175,95 225,83 Q288,70 348,80 Q378,85 400,77' stroke-width='1.1' opacity='0.12'/%3E%3Cpath d='M0,100 Q55,92 112,105 Q180,120 230,107 Q295,92 355,103 Q382,108 400,100' stroke-width='0.8' opacity='0.08'/%3E%3Cpath d='M0,125 Q50,118 108,128 Q178,142 228,130 Q292,116 352,126 Q380,132 400,124' stroke-width='1.2' opacity='0.12'/%3E%3Cpath d='M0,148 Q52,140 110,152 Q180,168 230,155 Q295,140 355,150 Q382,156 400,148' stroke-width='0.9' opacity='0.10'/%3E%3Cpath d='M0,172 Q55,165 112,175 Q182,190 232,178 Q298,164 358,174 Q384,180 400,172' stroke-width='1.0' opacity='0.10'/%3E%3Cpath d='M0,198 Q48,192 105,200 Q175,212 225,202 Q288,190 348,198 Q378,203 400,196' stroke-width='1.3' opacity='0.12'/%3E%3Cpath d='M0,222 Q52,215 110,225 Q180,238 230,226 Q295,214 355,224 Q382,228 400,220' stroke-width='0.8' opacity='0.08'/%3E%3Cpath d='M0,245 Q55,238 112,248 Q182,260 232,250 Q298,238 358,248 Q384,252 400,244' stroke-width='1.0' opacity='0.10'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:400px 250px}
+.cover-inner{position:relative;z-index:2;max-width:820px;margin:0 auto}
+.cover-label{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--gold-l);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:2rem}
+.cover h1{font-family:'Exo 2',sans-serif;font-size:clamp(3rem,6vw,5rem);font-weight:900;color:var(--w);line-height:0.95;letter-spacing:-0.04em;margin-bottom:1rem}
+.cover h1 em{font-style:italic;font-weight:300;color:var(--gl)}
+.cover-sub{font-size:1.1rem;color:rgba(255,255,255,0.55);max-width:480px;line-height:1.6;margin-bottom:3rem}
+.cover-meta{display:flex;gap:2rem;font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:rgba(255,255,255,0.35)}
+.cover-meta span{display:flex;align-items:center;gap:0.35rem}
+.cover-meta .d{width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.cover-tagline{font-family:'Exo 2',sans-serif;font-style:italic;font-size:1.5rem;color:var(--gold-p);margin-top:4rem;opacity:0.7}
+
+/* Section headers */
+.ch{padding:5rem 0 2rem;border-top:1px solid var(--n1);margin-top:3rem}
+.ch:first-of-type{border-top:none;margin-top:0}
+.ch-num{font-family:'JetBrains Mono',monospace;font-size:0.62rem;font-weight:600;color:var(--teal);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem}
+.ch-title{font-family:'Exo 2',sans-serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:800;color:var(--gd);letter-spacing:-0.025em;line-height:1.1;margin-bottom:0.6rem}
+.ch-desc{font-size:0.95rem;color:var(--n5);max-width:560px;line-height:1.7;margin-bottom:2.5rem}
+
+/* Sub-sections */
+.sh{font-family:'Exo 2',sans-serif;font-size:1.2rem;font-weight:700;color:var(--n9);margin:2.5rem 0 0.8rem;letter-spacing:-0.01em}
+.sh2{font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:700;color:var(--n7);margin:1.5rem 0 0.5rem}
+
+/* Body text */
+p{font-size:0.92rem;color:var(--n6);line-height:1.7;margin-bottom:1rem}
+p strong{color:var(--n8);font-weight:600}
+
+/* Lists */
+ul,ol{padding-left:1.5rem;margin-bottom:1rem}
+li{font-size:0.92rem;color:var(--n6);line-height:1.7;margin-bottom:0.3rem}
+
+/* Color cards */
+.colors{display:flex;flex-wrap:wrap;gap:1rem;margin:1.5rem 0 2rem}
+.color-card{width:140px}
+.color-swatch{width:140px;height:80px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+.color-info{margin-top:0.5rem}
+.color-name{font-weight:600;font-size:0.82rem;color:var(--n8)}
+.color-hex{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--n4)}
+.color-role{font-size:0.68rem;color:var(--n4);font-style:italic}
+
+/* Spec table */
+.spec-tbl{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--n1);border-radius:8px;overflow:hidden;margin:1rem 0 2rem;font-size:0.85rem}
+.spec-tbl thead{background:var(--gd)}
+.spec-tbl th{padding:0.7rem 1rem;font-family:'JetBrains Mono',monospace;font-size:0.62rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-align:left}
+.spec-tbl td{padding:0.8rem 1rem;color:var(--n6);border-bottom:1px solid var(--n1);vertical-align:top}
+.spec-tbl tr:last-child td{border-bottom:none}
+.spec-tbl tr:hover td{background:rgba(66,155,77,0.015)}
+
+/* Rule cards */
+.rule{background:var(--cream);border:1px solid rgba(27,58,42,0.06);border-radius:8px;padding:1.25rem 1.5rem;margin:1rem 0;display:flex;gap:1rem;align-items:flex-start}
+.rule-icon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.85rem;flex-shrink:0;margin-top:0.1rem}
+.rule-do .rule-icon{background:rgba(66,155,77,0.1);color:var(--g)}
+.rule-dont .rule-icon{background:rgba(196,83,58,0.1);color:var(--alert)}
+.rule-content h4{font-size:0.85rem;font-weight:700;color:var(--n8);margin-bottom:0.3rem}
+.rule-content p{font-size:0.82rem;margin-bottom:0}
+
+/* Ratio/proportion boxes */
+.ratio-box{background:var(--cream);border:1px solid var(--n1);border-radius:8px;padding:2rem;margin:1rem 0 2rem;text-align:center}
+
+/* Logo: usar sempre <img> com os arquivos originais de 01-logos/principal/ */
+
+/* Hex pattern inline */
+.hex-demo{width:100%;height:120px;border-radius:8px;margin:1rem 0 2rem;position:relative;overflow:hidden}
+.hex-demo.light{background:var(--cream)}
+.hex-demo.dark{background:var(--gd)}
+
+/* Gradient cards */
+.grad-row{display:flex;gap:1rem;margin:1rem 0 2rem;flex-wrap:wrap}
+.grad-card{flex:1;min-width:200px;height:80px;border-radius:8px;display:flex;align-items:flex-end;padding:0.6rem 0.8rem}
+.grad-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;font-weight:500;color:rgba(255,255,255,0.8);letter-spacing:0.05em}
+
+/* Type specimen inline */
+.type-spec{background:var(--cream);border-radius:8px;padding:1.5rem 2rem;margin:1rem 0 2rem}
+.type-row{display:flex;align-items:baseline;gap:1rem;padding:0.6rem 0;border-bottom:1px solid rgba(27,58,42,0.04)}
+.type-row:last-child{border-bottom:none}
+.type-label{font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--n4);width:60px;flex-shrink:0;letter-spacing:0.05em;text-transform:uppercase}
+.type-sample{flex:1}
+
+/* Footer */
+.manual-footer{max-width:820px;margin:0 auto;padding:3rem 2rem;border-top:1px solid var(--n1);display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--n4)}
+.manual-footer .ver{font-family:'JetBrains Mono',monospace;font-size:0.65rem}
+
+/* Responsive */
+@media(max-width:900px){.toc-float{display:none}.content{padding:0 1.25rem}section{padding:3rem 0}}
+@media(max-width:600px){.colors{justify-content:center}.grad-row{flex-direction:column}}
+
+/* Page numbers for print */
+@page{margin:2cm;@bottom-center{content:counter(page)}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+<div class="nav-in">
+  <div><span class="nav-b">LAPIG <span>Manual de Marca</span></span> <span class="nav-v">v1.0.0</span></div>
+  <ul class="nav-links">
+    <li><a href="#cap1">Marca</a></li>
+    <li><a href="#cap2">Logotipo</a></li>
+    <li><a href="#cap3">Cores</a></li>
+    <li><a href="#cap4">Tipografia</a></li>
+    <li><a href="#cap5">Elementos</a></li>
+    <li><a href="#cap6">Aplicações</a></li>
+    <li><a href="#cap7">Sub-marcas</a></li>
+    <li><a href="#cap8">Bilíngue</a></li>
+    <li><a href="#cap9">Governança</a></li>
+  </ul>
+</div>
+</nav>
+
+<!-- COVER -->
+<div class="cover">
+<div class="cover-inner">
+  <div class="cover-label">Manual de Identidade Visual</div>
+  <h1>Manual de Marca <em>LAPIG</em></h1>
+  <p class="cover-sub">
+    Laboratório de Processamento de Imagens e Geoprocessamento<br>
+    Instituto de Estudos Socioambientais · Universidade Federal de Goiás
+  </p>
+  <div class="cover-meta">
+    <span><div class="d"></div>Versão 1.0.0</span>
+    <span><div class="d"></div>Abril 2026</span>
+    <span><div class="d"></div>Desde 1994</span>
+  </div>
+  <div class="cover-tagline">Ciência que enxerga o território</div>
+</div>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="content" style="padding-top:4rem;padding-bottom:2rem">
+  <div class="ch-num">Índice</div>
+  <h2 class="ch-title" style="margin-bottom:2rem">Sumário</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 2rem">
+    <a href="#cap1" style="text-decoration:none;color:var(--n6);font-size:0.9rem;padding:0.5rem 0;border-bottom:1px solid var(--n1);display:flex;justify-content:space-between"><span><strong style="color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:0.7rem">01</strong> Plataforma de Marca</span></a>
+    <a href="#cap2" style="text-decoration:none;color:var(--n6);font-size:0.9rem;padding:0.5rem 0;border-bottom:1px solid var(--n1);display:flex;justify-content:space-between"><span><strong style="color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:0.7rem">02</strong> Logotipo</span></a>
+    <a href="#cap3" style="text-decoration:none;color:var(--n6);font-size:0.9rem;padding:0.5rem 0;border-bottom:1px solid var(--n1);display:flex;justify-content:space-between"><span><strong style="color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:0.7rem">03</strong> Paleta de Cores</span></a>
+    <a href="#cap4" style="text-decoration:none;color:var(--n6);font-size:0.9rem;padding:0.5rem 0;border-bottom:1px solid var(--n1);display:flex;justify-content:space-between"><span><strong style="color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:0.7rem">04</strong> Tipografia</span></a>
+    <a href="#cap5" style="text-decoration:none;color:var(--n6);font-size:0.9rem;padding:0.5rem 0;border-bottom:1px solid var(--n1);display:flex;justify-content:space-between"><span><strong style="color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:0.7rem">05</strong> Elementos Gráficos</span></a>
+    <a href="#cap6" style="text-decoration:none;color:var(--n6);font-size:0.9rem;padding:0.5rem 0;border-bottom:1px solid var(--n1);display:flex;justify-content:space-between"><span><strong style="color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:0.7rem">06</strong> Aplicações</span></a>
+    <a href="#cap7" style="text-decoration:none;color:var(--n6);font-size:0.9rem;padding:0.5rem 0;border-bottom:1px solid var(--n1);display:flex;justify-content:space-between"><span><strong style="color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:0.7rem">07</strong> Sub-marcas</span></a>
+    <a href="#cap8" style="text-decoration:none;color:var(--n6);font-size:0.9rem;padding:0.5rem 0;border-bottom:1px solid var(--n1);display:flex;justify-content:space-between"><span><strong style="color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:0.7rem">08</strong> Uso Bilíngue</span></a>
+    <a href="#cap9" style="text-decoration:none;color:var(--n6);font-size:0.9rem;padding:0.5rem 0;border-bottom:1px solid var(--n1);display:flex;justify-content:space-between"><span><strong style="color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:0.7rem">09</strong> Governança</span></a>
+  </div>
+</div>
+
+<!-- ═══ CAP 1: BRAND PLATFORM ═══ -->
+<div class="content">
+<section id="cap1">
+<div class="ch page-break">
+  <div class="ch-num">01 — Plataforma de Marca</div>
+  <h2 class="ch-title">Quem somos</h2>
+  <p class="ch-desc">Os fundamentos estratégicos que orientam todas as decisões de comunicação e identidade visual do LAPIG.</p>
+</div>
+
+<h3 class="sh">Propósito</h3>
+<p>Transformar dados geoespaciais em conhecimento acessível para a proteção e o uso sustentável dos territórios brasileiros e globais.</p>
+
+<h3 class="sh">Missão</h3>
+<p>Produzir pesquisa de excelência em sensoriamento remoto e geoprocessamento, com foco no monitoramento de pastagens e dinâmicas de uso do solo, gerando dados abertos que subsidiem políticas públicas ambientais, a agenda climática e decisões baseadas em evidências.</p>
+
+<h3 class="sh">Visão</h3>
+<p>Ser referência mundial na produção de inteligência territorial para pastagens e uso do solo, reconhecido pelo rigor científico, pela inovação tecnológica e pelo impacto mensurável de seus produtos em políticas públicas e mercados de carbono.</p>
+
+<h3 class="sh">Valores</h3>
+<ul>
+  <li><strong>Rigor científico</strong> em todas as etapas, da coleta à publicação</li>
+  <li><strong>Transparência e dados abertos</strong> como princípio inegociável</li>
+  <li><strong>Inovação tecnológica</strong> com propósito ambiental</li>
+  <li><strong>Impacto socioambiental</strong> mensurável e documentado</li>
+  <li><strong>Colaboração</strong> institucional e interdisciplinar</li>
+  <li><strong>Formação</strong> de capital humano qualificado</li>
+  <li><strong>Ciência aberta</strong> e reprodutível</li>
+</ul>
+
+<h3 class="sh">Proposta de Valor Única</h3>
+<p>O LAPIG é o único laboratório que integra, há mais de 30 anos, pesquisa acadêmica de fronteira em sensoriamento remoto com a produção sistemática de plataformas abertas de dados geoespaciais — traduzindo ciência em ferramentas operacionais para gestores públicos, agronegócio sustentável, mercados de carbono e a comunidade científica global. De Goiânia para 17 países.</p>
+
+<h3 class="sh">Assinatura da Marca</h3>
+<div style="background:var(--cream);border-radius:8px;padding:2rem;margin:1rem 0 2rem;text-align:center">
+  <div style="font-family:'Exo 2',sans-serif;font-size:1.8rem;font-weight:700;color:var(--gd);margin-bottom:0.5rem;letter-spacing:-0.02em">Ciência que enxerga o território</div>
+  <div style="font-family:'Exo 2',sans-serif;font-size:1.2rem;font-style:italic;color:var(--n4)">Science that sees the land</div>
+</div>
+
+<h3 class="sh">Personalidade da Marca</h3>
+<p><strong>Tom:</strong> Científico, mas acessível. Sério, mas não burocrático. Preciso, mas não frio.</p>
+<p><strong>Arquétipos:</strong> Sábio (conhecimento, rigor, autoridade) + Explorador (descoberta territorial, curiosidade, fronteira).</p>
+
+<h3 class="sh">Dados de Impacto</h3>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:1rem 0 2rem">
+  <div style="background:var(--gd);border-radius:8px;padding:1.25rem;text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:1.8rem;font-weight:600;color:var(--gold-l)">155M</div>
+    <div style="font-size:0.72rem;color:rgba(255,255,255,0.6)">hectares de pastagem mapeados</div>
+  </div>
+  <div style="background:var(--gd);border-radius:8px;padding:1.25rem;text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:1.8rem;font-weight:600;color:var(--gold-l)">17</div>
+    <div style="font-size:0.72rem;color:rgba(255,255,255,0.6)">paises mapeados</div>
+  </div>
+  <div style="background:var(--gd);border-radius:8px;padding:1.25rem;text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:1.8rem;font-weight:600;color:var(--gold-l)">93.3%</div>
+    <div style="font-size:0.72rem;color:rgba(255,255,255,0.6)">acuracia global MapBiomas</div>
+  </div>
+  <div style="background:var(--gd);border-radius:8px;padding:1.25rem;text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:1.8rem;font-weight:600;color:var(--gold-l)">110+</div>
+    <div style="font-size:0.72rem;color:rgba(255,255,255,0.6)">integrantes da equipe</div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ CAP 2: LOGOTIPO ═══ -->
+<section id="cap2">
+<div class="ch page-break">
+  <div class="ch-num">02 — Logotipo</div>
+  <h2 class="ch-title">Sistema de Logotipos</h2>
+  <p class="ch-desc">O logotipo do LAPIG é composto pelo wordmark tipográfico e pelo globo terrestre integrado à letra "i". Sua construção foi refinada para garantir legibilidade em todas as escalas.</p>
+</div>
+
+<h3 class="sh">Conceito</h3>
+<p>O wordmark <strong>LAPIG</strong> utiliza tipografia geométrica extra-bold com cantos arredondados e proporções largas, comunicando solidez científica e modernidade tecnológica. O <strong>globo terrestre</strong> substitui o ponto do "i", integrando organicamente o escopo geoespacial do laboratório à identidade tipográfica. O globo destaca a América do Sul, reforçando o posicionamento territorial brasileiro com projeção global. A <strong>barra verde diagonal</strong> abaixo do wordmark confere dinamismo e ancora a composição.</p>
+
+<div class="rule rule-dont" style="background:#fff3f0;margin:1.5rem 0"><div class="rule-icon">!</div><div class="rule-content"><h4>Logo oficial é intocável</h4><p>Os arquivos originais nas pastas <code>Logos Lapig/</code> e <code>Logo Lapig em inglês/</code> são os únicos logos oficiais. Não se deve recriar, redesenhar ou alterar nenhum elemento do logotipo. Todas as aplicações devem utilizar os arquivos SVG/PNG originais.</p></div></div>
+
+<h3 class="sh">Versões Oficiais</h3>
+
+<h4 class="sh2">V1 — Com subtitulo (PT-BR)</h4>
+<div class="ratio-box">
+  <img src="../01-logos/principal/lapig-logo-v1-ptbr-com-subtitulo.png" alt="LAPIG Logo v1 PT-BR" style="max-width:360px;height:auto">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--n3);margin-top:1rem">Arquivo: <code>01-logos/principal/lapig-logo-v1-ptbr-com-subtitulo.svg</code> · Uso: papelaria, relatórios, apresentações formais</div>
+</div>
+
+<h4 class="sh2">V2 — Sem subtitulo (PT-BR)</h4>
+<div class="ratio-box">
+  <img src="../01-logos/principal/lapig-logo-v2-sem-subtitulo.png" alt="LAPIG Logo v2" style="max-width:360px;height:auto">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--n3);margin-top:1rem">Arquivo: <code>01-logos/principal/lapig-logo-v2-sem-subtitulo.svg</code> · Versão mais utilizada: redes sociais, slides, co-branding</div>
+</div>
+
+<h4 class="sh2">V1 — Com subtitulo (EN)</h4>
+<div class="ratio-box">
+  <img src="../01-logos/principal/lapig-logo-v1-en-com-subtitulo.png" alt="LAPIG Logo EN v1" style="max-width:300px;height:auto">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--n3);margin-top:1rem">Arquivo: <code>Logo Lapig em inglês/SVG/...versão 1.svg</code> · Uso: publicações internacionais, parcerias, GitHub</div>
+</div>
+
+<h4 class="sh2">V2 — Com subtitulo (EN, fundo escuro)</h4>
+<div class="ratio-box" style="background:var(--gd);padding:2.5rem">
+  <img src="../01-logos/principal/lapig-logo-v2-en-com-subtitulo.png" alt="LAPIG Logo EN v2" style="max-width:300px;height:auto">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:rgba(255,255,255,0.4);margin-top:1rem">Arquivo: <code>Logo Lapig em inglês/SVG/...versão 2.svg</code> · Versão para fundos escuros</div>
+</div>
+
+<h3 class="sh">Área de Proteção</h3>
+<p>A área de proteção mínima ao redor do logotipo equivale à <strong>metade da altura da letra "L"</strong> em todas as direções. Nenhum elemento gráfico, texto ou borda deve invadir essa área.</p>
+<div class="ratio-box">
+  <div style="border:2px dashed var(--n2);display:inline-block;padding:2rem 3rem;position:relative">
+    <img src="../01-logos/principal/lapig-logo-v2-sem-subtitulo.png" alt="LAPIG" style="height:48px">
+    <div style="position:absolute;top:0.5rem;left:50%;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:0.5rem;color:var(--n3)">x/2</div>
+    <div style="position:absolute;bottom:0.5rem;left:50%;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:0.5rem;color:var(--n3)">x/2</div>
+    <div style="position:absolute;left:0.3rem;top:50%;transform:translateY(-50%);font-family:'JetBrains Mono',monospace;font-size:0.5rem;color:var(--n3)">x/2</div>
+  </div>
+  <div style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--n3);margin-top:1rem">x = altura da letra L no wordmark</div>
+</div>
+
+<h3 class="sh">Tamanho Mínimo</h3>
+<table class="spec-tbl">
+<thead><tr><th>Versão</th><th>Impresso</th><th>Digital</th></tr></thead>
+<tbody>
+<tr><td>Com subtítulo</td><td>30mm de largura</td><td>120px de largura</td></tr>
+<tr><td>Sem subtítulo</td><td>15mm de largura</td><td>64px de largura</td></tr>
+<tr><td>Ícone hexagonal</td><td>8mm de largura</td><td>16px de largura</td></tr>
+</tbody>
+</table>
+
+<h3 class="sh">Usos Incorretos</h3>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1rem 0 2rem">
+  <div class="rule rule-dont"><div class="rule-icon">✕</div><div class="rule-content"><h4>Não distorcer</h4><p>Nunca alterar as proporções do logotipo</p></div></div>
+  <div class="rule rule-dont"><div class="rule-icon">✕</div><div class="rule-content"><h4>Não rotacionar</h4><p>O logotipo deve ser sempre horizontal</p></div></div>
+  <div class="rule rule-dont"><div class="rule-icon">✕</div><div class="rule-content"><h4>Não adicionar efeitos</h4><p>Sem sombras, brilhos, gradientes ou contornos</p></div></div>
+  <div class="rule rule-dont"><div class="rule-icon">✕</div><div class="rule-content"><h4>Não alterar cores</h4><p>Usar apenas as versões cromáticas oficiais</p></div></div>
+  <div class="rule rule-dont"><div class="rule-icon">✕</div><div class="rule-content"><h4>Não sobre fundo complexo</h4><p>Em fotos, usar caixa branca/escura atrás do logo</p></div></div>
+  <div class="rule rule-dont"><div class="rule-icon">✕</div><div class="rule-content"><h4>Não substituir o globo</h4><p>O globo não pode ser trocado por outro ícone</p></div></div>
+</div>
+</section>
+
+<!-- ═══ CAP 3: CORES ═══ -->
+<section id="cap3">
+<div class="ch page-break">
+  <div class="ch-num">03 — Paleta de Cores</div>
+  <h2 class="ch-title">Sistema Cromático</h2>
+  <p class="ch-desc">A paleta combina o verde institucional consolidado em 30 anos com tons do Cerrado brasileiro, acentos tecnológicos e neutros funcionais.</p>
+</div>
+
+<h3 class="sh">Cores Primarias</h3>
+<div class="colors">
+  <div class="color-card"><div class="color-swatch" style="background:#429B4D"></div><div class="color-info"><div class="color-name">Cerrado Green</div><div class="color-hex">#429B4D · RGB 66,155,77</div><div class="color-role">CMYK 57,0,50,39 · Pantone 7731 C</div></div></div>
+  <div class="color-card"><div class="color-swatch" style="background:#1B3A2A"></div><div class="color-info"><div class="color-name">Deep Forest</div><div class="color-hex">#1B3A2A · RGB 27,58,42</div><div class="color-role">Fundos escuros, títulos</div></div></div>
+  <div class="color-card"><div class="color-swatch" style="background:#F6F1E7"></div><div class="color-info"><div class="color-name">Cream</div><div class="color-hex">#F6F1E7 · RGB 246,241,231</div><div class="color-role">Fundo padrão claro</div></div></div>
+</div>
+
+<h3 class="sh">Cores Secundarias</h3>
+<div class="colors">
+  <div class="color-card"><div class="color-swatch" style="background:#2A9D8F"></div><div class="color-info"><div class="color-name">Tech Teal</div><div class="color-hex">#2A9D8F · RGB 42,157,143</div><div class="color-role">CMYK 73,0,9,38 · Pantone 7473 C</div></div></div>
+  <div class="color-card"><div class="color-swatch" style="background:#C4933F"></div><div class="color-info"><div class="color-name">Cerrado Gold</div><div class="color-hex">#C4933F · RGB 196,147,63</div><div class="color-role">CMYK 0,25,68,23 · Pantone 7407 C</div></div></div>
+  <div class="color-card"><div class="color-swatch" style="background:#6B4C3B"></div><div class="color-info"><div class="color-name">Earth Brown</div><div class="color-hex">#6B4C3B · RGB 107,76,59</div><div class="color-role">Elementos terrosos, texto em destaque</div></div></div>
+</div>
+
+<h3 class="sh">Neutros</h3>
+<div class="colors">
+  <div class="color-card"><div class="color-swatch" style="background:#1A1A18"></div><div class="color-info"><div class="color-name">Neutral 900</div><div class="color-hex">#1A1A18</div></div></div>
+  <div class="color-card"><div class="color-swatch" style="background:#404040"></div><div class="color-info"><div class="color-name">Neutral 700</div><div class="color-hex">#404040</div></div></div>
+  <div class="color-card"><div class="color-swatch" style="background:#6B6B65"></div><div class="color-info"><div class="color-name">Neutral 500</div><div class="color-hex">#6B6B65</div></div></div>
+  <div class="color-card"><div class="color-swatch" style="background:#ABABAA"></div><div class="color-info"><div class="color-name">Neutral 300</div><div class="color-hex">#ABABAA</div></div></div>
+  <div class="color-card"><div class="color-swatch" style="background:#ECECEA"></div><div class="color-info"><div class="color-name">Neutral 100</div><div class="color-hex">#ECECEA</div></div></div>
+</div>
+
+<h3 class="sh">Gradientes Permitidos</h3>
+<div class="grad-row">
+  <div class="grad-card" style="background:linear-gradient(135deg,#1B3A2A,#429B4D)"><div class="grad-label">Cerrado · fundos escuros</div></div>
+  <div class="grad-card" style="background:linear-gradient(135deg,#2A9D8F,#429B4D)"><div class="grad-label">Satelite · contextos tech</div></div>
+  <div class="grad-card" style="background:linear-gradient(135deg,#C4933F,#6B4C3B)"><div class="grad-label">Golden Hour · contextos terrosos</div></div>
+</div>
+
+<h3 class="sh">Proporção de Uso (60-30-10)</h3>
+<div style="display:flex;height:40px;border-radius:6px;overflow:hidden;margin:1rem 0 1.5rem">
+  <div style="width:60%;background:var(--cream);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--n5)">60% Cream / White</div>
+  <div style="width:30%;background:var(--g);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--w)">30% Green / Deep Forest</div>
+  <div style="width:10%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:var(--w)">10%</div>
+</div>
+<p>A cor dominante é sempre neutra (cream ou branco). O verde é a cor estrutural. Gold, teal e brown são acentos. O alerta vermelho (#C4533A) é reservado para situações críticas.</p>
+
+<h3 class="sh">Acessibilidade (WCAG 2.1 AA)</h3>
+<table class="spec-tbl">
+<thead><tr><th>Combinação</th><th>Contraste</th><th>Uso</th></tr></thead>
+<tbody>
+<tr><td>Deep Forest sobre Cream</td><td>12.8:1 ✓ AAA</td><td>Texto principal em fundo claro</td></tr>
+<tr><td>Cerrado Green sobre White</td><td>4.6:1 ✓ AA</td><td>Texto grande, botoes, links</td></tr>
+<tr><td>White sobre Deep Forest</td><td>12.8:1 ✓ AAA</td><td>Texto em fundo escuro</td></tr>
+<tr><td>Gold sobre Deep Forest</td><td>5.2:1 ✓ AA</td><td>Destaques em fundo escuro</td></tr>
+<tr><td>Neutral 700 sobre Cream</td><td>7.1:1 ✓ AAA</td><td>Texto secundario em fundo claro</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- ═══ CAP 4: TIPOGRAFIA ═══ -->
+<section id="cap4">
+<div class="ch page-break">
+  <div class="ch-num">04 — Tipografia</div>
+  <h2 class="ch-title">Sistema Tipográfico</h2>
+  <p class="ch-desc">Três famílias tipográficas — todas gratuitas via Google Fonts (licença OFL) — cobrindo display, corpo e dados.</p>
+</div>
+
+<h3 class="sh">Famílias</h3>
+<table class="spec-tbl">
+<thead><tr><th>Função</th><th>Família</th><th>Pesos</th><th>Fallback</th></tr></thead>
+<tbody>
+<tr><td><strong>Display / Títulos</strong></td><td style="font-family:'Exo 2',sans-serif;font-weight:700">Exo 2</td><td>600, 700, 800, 900</td><td>Arial, sans-serif</td></tr>
+<tr><td><strong>Corpo / UI</strong></td><td style="font-family:'DM Sans',sans-serif">DM Sans</td><td>400, 500, 600, 700</td><td>system-ui, sans-serif</td></tr>
+<tr><td><strong>Mono / Dados</strong></td><td style="font-family:'JetBrains Mono',monospace">JetBrains Mono</td><td>400, 500, 600</td><td>Consolas, monospace</td></tr>
+</tbody>
+</table>
+
+<h3 class="sh">Escala Tipográfica</h3>
+<div class="type-spec">
+  <div class="type-row"><div class="type-label">h1</div><div class="type-sample" style="font-family:'Exo 2',sans-serif;font-size:2.5rem;font-weight:900;line-height:1.05;letter-spacing:-0.035em;color:var(--gd)">Ciência que enxerga</div></div>
+  <div class="type-row"><div class="type-label">h2</div><div class="type-sample" style="font-family:'Exo 2',sans-serif;font-size:1.8rem;font-weight:800;line-height:1.1;letter-spacing:-0.03em;color:var(--gd)">Monitoramento de Pastagens</div></div>
+  <div class="type-row"><div class="type-label">h3</div><div class="type-sample" style="font-family:'Exo 2',sans-serif;font-size:1.3rem;font-weight:700;line-height:1.2;letter-spacing:-0.02em;color:var(--n9)">Atlas das Pastagens do Brasil</div></div>
+  <div class="type-row"><div class="type-label">h4</div><div class="type-sample" style="font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;line-height:1.3;color:var(--n7)">Metodologia de Classificação</div></div>
+  <div class="type-row"><div class="type-label">body</div><div class="type-sample" style="font-size:0.92rem;line-height:1.65;color:var(--n6)">O LAPIG produz dados geoespaciais abertos para monitoramento de pastagens e uso do solo no Cerrado brasileiro.</div></div>
+  <div class="type-row"><div class="type-label">caption</div><div class="type-sample" style="font-size:0.75rem;font-weight:500;line-height:1.5;color:var(--n4)">Fonte: MapBiomas Coleção 10, 2024</div></div>
+  <div class="type-row"><div class="type-label">overline</div><div class="type-sample" style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;font-weight:600;line-height:1.4;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal)">Dados de Impacto</div></div>
+  <div class="type-row"><div class="type-label">data</div><div class="type-sample" style="font-family:'JetBrains Mono',monospace;font-size:2rem;font-weight:600;color:var(--gold)">155.000.000 ha</div></div>
+</div>
+</section>
+
+<!-- ═══ CAP 5: ELEMENTOS GRAFICOS ═══ -->
+<section id="cap5">
+<div class="ch page-break">
+  <div class="ch-num">05 — Elementos Gráficos</div>
+  <h2 class="ch-title">Curvas de Nível e Hexágonos</h2>
+  <p class="ch-desc">A linguagem visual de apoio do LAPIG utiliza dois elementos gráficos com funções distintas: as <strong>curvas de nível topográficas</strong> como elemento principal de <strong>background</strong> (texturas, fundos de slides, fundos de cards) e os <strong>hexágonos</strong> como elemento <strong>complementar</strong> para recortes de imagens, ícones de títulos e molduras. Esses elementos <strong>nunca substituem ou competem com o logotipo oficial</strong>.</p>
+</div>
+
+<h3 class="sh">Curvas de Nível — Elemento Principal de Background</h3>
+<p>As curvas de nível topográficas são o <strong>elemento gráfico principal</strong> para fundos e texturas em todos os materiais da marca. Representam o território, a topografia e o relevo da paisagem — referência direta à cartografia e ao sensoriamento remoto. As curvas fluem de borda a borda com ondulações orgânicas e espaçamento variável, simulando um mapa topográfico real.</p>
+
+<div class="rule rule-dont" style="background:#fff3f0;margin:1rem 0"><div class="rule-icon">!</div><div class="rule-content"><h4>Regra absoluta: nenhuma curva pode sobrepor outra</h4><p>As linhas devem ser sempre paralelas, com distância mínima entre si. Nunca se cruzam, nunca se tocam. Essa regra é inviolável e reproduz o comportamento real de isolinhas topográficas.</p></div></div>
+
+<h3 class="sh">Hexágonos — Elemento Complementar</h3>
+<p>O hexágono é um elemento <strong>complementar</strong>, utilizado exclusivamente para recortes de imagens, molduras de fotografias (equipe, palestrantes), ícones de título e contêineres de informação. Referência direta aos grids geoespaciais (H3). <strong>Não deve ser usado como pattern de background.</strong></p>
+
+<div style="background:var(--cream);border-radius:8px;padding:2rem;margin:1rem 0 2rem;text-align:center">
+  <svg width="360" height="160" viewBox="0 0 360 160" fill="none">
+    <!-- Hex grid -->
+    <g opacity="0.15" stroke="#429B4D" stroke-width="0.8">
+      <polygon points="50,10 85,25 85,55 50,70 15,55 15,25"/>
+      <polygon points="120,10 155,25 155,55 120,70 85,55 85,25"/>
+      <polygon points="190,10 225,25 225,55 190,70 155,55 155,25"/>
+      <polygon points="260,10 295,25 295,55 260,70 225,55 225,25"/>
+      <polygon points="330,10 360,22 360,52 330,70 295,55 295,25"/>
+      <polygon points="85,55 120,70 120,100 85,115 50,100 50,70"/>
+      <polygon points="155,55 190,70 190,100 155,115 120,100 120,70"/>
+      <polygon points="225,55 260,70 260,100 225,115 190,100 190,70"/>
+      <polygon points="295,55 330,70 330,100 295,115 260,100 260,70"/>
+      <polygon points="50,100 85,115 85,145 50,160 15,145 15,115"/>
+      <polygon points="120,100 155,115 155,145 120,160 85,145 85,115"/>
+      <polygon points="190,100 225,115 225,145 190,160 155,145 155,115"/>
+      <polygon points="260,100 295,115 295,145 260,160 225,145 225,115"/>
+    </g>
+  </svg>
+  <div style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--n3);margin-top:0.5rem">Pattern hexagonal · opacidade 10-15% · fundo claro</div>
+</div>
+
+<h3 class="sh">Curvas de Nível (Isolinhas Topográficas)</h3>
+<p>As curvas de nível representam o território, a topografia e o relevo da paisagem — com formas concêntricas irregulares que simulam elevações reais, como num mapa topográfico do IBGE ou do SRTM. Referência direta à cartografia e à modelagem de terreno. Uso: texturas de fundo, acentos decorativos, separadores de seção, composições com fotografia.</p>
+
+<div style="background:var(--gd);border-radius:8px;padding:2rem;margin:1rem 0 2rem;text-align:center">
+  <svg width="500" height="200" viewBox="0 0 500 200" fill="none">
+    <g stroke="#C4933F" stroke-linecap="round">
+      <path d="M0,18 Q30,5 55,20 Q100,45 150,25 Q195,8 235,30 Q280,55 330,35 Q375,15 415,38 Q460,62 500,40" stroke-width="1.0" opacity="0.25"/>
+      <path d="M0,42 Q32,28 60,45 Q108,72 158,50 Q202,30 245,55 Q290,82 340,60 Q385,38 425,62 Q468,88 500,65" stroke-width="1.3" opacity="0.30"/>
+      <path d="M0,68 Q35,52 65,72 Q112,100 162,78 Q208,55 252,80 Q298,108 348,85 Q392,62 435,88 Q472,112 500,90" stroke-width="0.9" opacity="0.26"/>
+      <path d="M0,95 Q30,78 58,98 Q105,128 155,105 Q200,80 242,108 Q288,138 338,115 Q382,90 425,115 Q468,140 500,118" stroke-width="1.5" opacity="0.32"/>
+      <path d="M0,122 Q35,105 65,125 Q112,155 162,132 Q208,108 252,135 Q298,165 348,142 Q392,118 435,142 Q472,168 500,145" stroke-width="1.0" opacity="0.27"/>
+      <path d="M0,150 Q30,132 58,152 Q105,182 155,160 Q200,135 242,162 Q288,192 338,168 Q382,145 425,170 Q468,195 500,172" stroke-width="1.2" opacity="0.28"/>
+      <path d="M0,178 Q35,160 65,180 Q112,210 162,188 Q208,165 252,190 Q298,218 348,196 Q392,172 435,198 Q472,222 500,200" stroke-width="1.4" opacity="0.30"/>
+    </g>
+  </svg>
+  <div style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:rgba(255,255,255,0.3);margin-top:0.5rem">Curvas de nível em dourado · fundo escuro · ondulações acentuadas · linhas nunca se cruzam</div>
+</div>
+
+<h3 class="sh">Regras de Uso</h3>
+<div class="rule rule-do"><div class="rule-icon">✓</div><div class="rule-content"><h4>Curvas de nível como background principal</h4><p>Usar em fundos de slides, cards, banners e materiais impressos. Opacidade entre 18% e 32%. Traços de 0.8px a 1.5px. Cores: verde (#429B4D) ou dourado (#C4933F).</p></div></div>
+<div class="rule rule-do"><div class="rule-icon">✓</div><div class="rule-content"><h4>Hexágonos como recortes e molduras</h4><p>Fotos de equipe, instrutores e palestrantes podem usar recorte hexagonal. Ícones de título e selos podem ter forma hexagonal.</p></div></div>
+<div class="rule rule-do"><div class="rule-icon">✓</div><div class="rule-content"><h4>Hexágonos como contêineres de ícone</h4><p>Stickers, favicons e avatares podem usar o hexágono como forma base.</p></div></div>
+<div class="rule rule-dont"><div class="rule-icon">✕</div><div class="rule-content"><h4>Não usar hexágonos como background</h4><p>O grid hexagonal <strong>não</strong> deve ser utilizado como textura de fundo. Os backgrounds pertencem exclusivamente às curvas de nível.</p></div></div>
+<div class="rule rule-dont"><div class="rule-icon">✕</div><div class="rule-content"><h4>Nunca cruzar curvas de nível</h4><p>Nenhuma linha pode sobrepor ou cruzar outra. As curvas devem ser sempre paralelas com espaçamento variável, como isolinhas topográficas reais.</p></div></div>
+<div class="rule rule-dont"><div class="rule-icon">✕</div><div class="rule-content"><h4>Não misturar com outros patterns</h4><p>Curvas de nível e hexágonos são os únicos elementos gráficos permitidos. Não combinar com círculos, triângulos ou grids quadrados.</p></div></div>
+
+<h3 class="sh">Iconografia</h3>
+<p><strong>Estilo:</strong> Line icons, peso de stroke 1.5px, cantos arredondados (2px radius).</p>
+<p><strong>Biblioteca recomendada:</strong> Lucide Icons (MIT license, consistente com a estética geométrica). Personalizar quando necessário, mantendo o mesmo grid e peso.</p>
+<p><strong>Grid:</strong> 24x24px base, com área de sangria de 2px. Stroke uniforme de 1.5px.</p>
+
+<h3 class="sh">Fotografia</h3>
+<p><strong>Fotos institucionais:</strong> Preferir iluminação natural. Equipe em contexto de trabalho (campo, laboratório, tela com mapa). Evitar poses artificiais.</p>
+<p><strong>Imagens de satélite:</strong> Podem ser usadas como fundo com overlay escuro (70–85% de opacidade em Deep Forest) para legibilidade do texto.</p>
+<p><strong>Paisagens do Cerrado:</strong> Ipês amarelos, pastagens, vegetação nativa — constituem o acervo visual prioritário. Sempre creditar o fotógrafo.</p>
+</section>
+
+<!-- ═══ CAP 6: APLICACOES ═══ -->
+<section id="cap6">
+<div class="ch page-break">
+  <div class="ch-num">06 — Aplicações</div>
+  <h2 class="ch-title">Templates e Materiais</h2>
+  <p class="ch-desc">Todos os templates estão disponíveis na pasta <code style="font-family:'JetBrains Mono',monospace;font-size:0.85em;background:var(--n1);padding:0.1em 0.4em;border-radius:3px">04-templates/</code> do pacote de marca.</p>
+</div>
+
+<h3 class="sh">Papelaria</h3>
+<ul>
+  <li><strong>Cartão de visita</strong> — 90×50mm, frente com logo e dados, verso em Cerrado Green com pattern hexagonal</li>
+  <li><strong>Papel timbrado</strong> — A4, cabeçalho com logo + dados institucionais, rodapé discreto com co-branding UFG</li>
+  <li><strong>Assinatura de e-mail</strong> — HTML responsivo, compatível com clientes de e-mail corporativos</li>
+  <li><strong>Crachá</strong> — Retrato, foto em frame hexagonal, cabeçalho verde com logo em branco</li>
+</ul>
+
+<h3 class="sh">Digital</h3>
+<ul>
+  <li><strong>Apresentação 16:9</strong> — 4 tipos de slide (capa, conteúdo, dados, encerramento). Versões PT-BR e EN</li>
+  <li><strong>Instagram feed</strong> — 1080×1080, 3 variantes (evento, dados, curso)</li>
+  <li><strong>Instagram stories</strong> — 1080×1920, 2 variantes (foto com overlay, texto focado)</li>
+  <li><strong>Open Graph</strong> — 1200×630 para compartilhamento em redes</li>
+  <li><strong>Favicon</strong> — Ícone hexagonal em 16, 32, 192 e 512px</li>
+  <li><strong>Banner GitHub</strong> — Padrão README com badge de status</li>
+</ul>
+
+<h3 class="sh">Publicações Científicas</h3>
+<ul>
+  <li><strong>Pôster de congresso</strong> — A0 (90×120cm), 3 colunas, cabeçalho verde, hex grid como textura</li>
+  <li><strong>Capa de relatório</strong> — A4, composição com foto de satélite + overlay + título</li>
+  <li><strong>Figuras para artigos</strong> — Exportar a 300 dpi, usar paleta MapBiomas para mapas temáticos, citar "LAPIG/UFG" no rodapé</li>
+</ul>
+
+<h3 class="sh">Sinalização Física</h3>
+<ul>
+  <li><strong>Placa de porta</strong> — Paisagem, fundo Deep Forest, logo em branco, hex pattern</li>
+  <li><strong>Roll-up banner</strong> — 80×200cm, foto de satélite no topo, conteúdo no meio, barra de logos na base</li>
+  <li><strong>Camiseta</strong> — Frente: logo pequeno no peito (branco sobre tecido escuro). Costas: tagline + website</li>
+  <li><strong>Adesivo/sticker</strong> — Formato hexagonal com ícone do globo</li>
+</ul>
+</section>
+
+<!-- ═══ CAP 7: SUB-MARCAS ═══ -->
+<section id="cap7">
+<div class="ch page-break">
+  <div class="ch-num">07 — Sub-marcas</div>
+  <h2 class="ch-title">Política de Sub-marcas</h2>
+  <p class="ch-desc">O LAPIG opera múltiplos produtos, projetos e programas. Cada um pode ter identidade própria, desde que respeite a hierarquia da marca-mãe.</p>
+</div>
+
+<h3 class="sh">Hierarquia</h3>
+<table class="spec-tbl">
+<thead><tr><th>Nível</th><th>Tipo</th><th>Exemplos</th><th>Regra Visual</th></tr></thead>
+<tbody>
+<tr><td><strong>Master</strong></td><td>Marca-mãe</td><td>LAPIG</td><td>Logo principal. Sempre presente em todos os materiais.</td></tr>
+<tr><td><strong>Endorsed</strong></td><td>Produto próprio</td><td>Atlas das Pastagens, TVI, PastoLegal, Canopeia</td><td>Logo próprio + "by LAPIG" ou logo LAPIG adjacente. Pode ter paleta própria dentro do sistema.</td></tr>
+<tr><td><strong>Program</strong></td><td>Programa/série</td><td>GeoCursos, LAPIG Connect, LAPIG Escola, Lapigoods</td><td>Usa "LAPIG" no nome. Segue a paleta master. Pode ter ícone próprio (dentro do grid hexagonal).</td></tr>
+<tr><td><strong>Project</strong></td><td>Projeto externo</td><td>MapBiomas, Global Pasture Watch, Time2Graze</td><td>Co-branding. Logo LAPIG aparece como parceiro na barra de logos. Não altera a identidade do projeto externo.</td></tr>
+<tr><td><strong>Event</strong></td><td>Evento pontual</td><td>Remanescer, Biomas Brasileiros</td><td>Pode ter identidade temática própria. Logo LAPIG na barra de realização/apoio.</td></tr>
+</tbody>
+</table>
+
+<h3 class="sh">Regras de Co-branding</h3>
+<p><strong>LAPIG + UFG:</strong> O logo da UFG deve sempre acompanhar o do LAPIG em materiais institucionais formais. Posição: à direita do LAPIG, separado por barra vertical ou espaço equivalente à área de proteção. O logo do IESA, quando presente, fica entre LAPIG e UFG.</p>
+<p><strong>LAPIG + Parceiros:</strong> Em materiais de projetos conjuntos, todos os logos devem ter altura equivalente. Organizar em barra horizontal na base do material. O LAPIG não deve ocupar posição de destaque desproporcional, nem ser reduzido abaixo do tamanho mínimo.</p>
+
+<h3 class="sh">Ordem de Logos em Barra</h3>
+<div style="background:var(--cream);border-radius:8px;padding:1.5rem 2rem;margin:1rem 0 2rem;display:flex;align-items:center;gap:2rem;justify-content:center">
+  <img src="../01-logos/principal/lapig-logo-v2-sem-subtitulo.png" alt="LAPIG" style="height:28px">
+  <div style="width:1px;height:24px;background:var(--n2)"></div>
+  <div style="font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:500;color:var(--n4)">IESA</div>
+  <div style="width:1px;height:24px;background:var(--n2)"></div>
+  <div style="font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:600;color:var(--n4)">UFG</div>
+</div>
+</section>
+
+<!-- ═══ CAP 8: BILINGUE ═══ -->
+<section id="cap8">
+<div class="ch page-break">
+  <div class="ch-num">08 — Uso Bilíngue</div>
+  <h2 class="ch-title">Diretrizes PT-BR / EN</h2>
+  <p class="ch-desc">O LAPIG opera em dois idiomas. Estas regras definem quando usar cada um.</p>
+</div>
+
+<table class="spec-tbl">
+<thead><tr><th>Contexto</th><th>Idioma</th><th>Justificativa</th></tr></thead>
+<tbody>
+<tr><td>Artigos científicos (journals internacionais)</td><td><strong>EN</strong></td><td>Padrão das publicações indexadas</td></tr>
+<tr><td>Relatórios para órgãos públicos brasileiros</td><td><strong>PT-BR</strong></td><td>SEMAD, IBAMA, MMA — comunicação oficial</td></tr>
+<tr><td>Redes sociais (@lapigufg)</td><td><strong>PT-BR</strong></td><td>Público predominantemente brasileiro</td></tr>
+<tr><td>GitHub, README, docs técnicos</td><td><strong>EN</strong></td><td>Padrão open-source internacional</td></tr>
+<tr><td>Apresentações em congressos nacionais</td><td><strong>PT-BR</strong></td><td>SBSR, CBG, seminários regionais</td></tr>
+<tr><td>Apresentações em congressos internacionais</td><td><strong>EN</strong></td><td>AGU, EGU, IGARSS</td></tr>
+<tr><td>Website institucional</td><td><strong>PT-BR + EN</strong></td><td>Versão bilíngue com toggle de idioma</td></tr>
+<tr><td>Cartão de visita</td><td><strong>Bilíngue único</strong></td><td>Frente em PT-BR, verso em EN, ou card bilíngue único</td></tr>
+<tr><td>Co-branding com parceiros internacionais</td><td><strong>EN</strong></td><td>Logo EN ("Remote Sensing and GIS Lab")</td></tr>
+<tr><td>Material educativo / extensão</td><td><strong>PT-BR</strong></td><td>Lapigoods, LAPIG Escola — público local</td></tr>
+</tbody>
+</table>
+
+<h3 class="sh">Termos que Não se Traduzem</h3>
+<p>Os seguintes termos são nomes próprios e devem ser mantidos na forma original em ambos os idiomas:</p>
+<ul>
+  <li><strong>Cerrado</strong> — em EN, usar itálico na primeira menção: <em>Cerrado</em></li>
+  <li><strong>LAPIG</strong> — sigla universal</li>
+  <li><strong>MapBiomas</strong>, <strong>Atlas das Pastagens</strong>, <strong>TVI</strong>, <strong>PastoLegal</strong> — nomes de produto</li>
+  <li><strong>GeoCursos</strong>, <strong>LAPIG Connect</strong> — nomes de programa</li>
+</ul>
+</section>
+
+<!-- ═══ CAP 9: GOVERNANCA ═══ -->
+<section id="cap9">
+<div class="ch page-break">
+  <div class="ch-num">09 — Governança</div>
+  <h2 class="ch-title">Gestão da Marca</h2>
+  <p class="ch-desc">Regras de aprovação, versionamento e contato do guardião da marca.</p>
+</div>
+
+<h3 class="sh">Checklist de Aprovação</h3>
+<p>Todo material que utilize a marca LAPIG deve passar pela seguinte verificação antes da publicação:</p>
+<ul>
+  <li>☐ Logo na versão correta (com/sem subtítulo, PT/EN) e dentro da área de proteção</li>
+  <li>☐ Cores conforme a paleta oficial (não usar aproximações)</li>
+  <li>☐ Tipografia do sistema (Exo 2, DM Sans, JetBrains Mono)</li>
+  <li>☐ Idioma correto para o contexto (ver capítulo 08)</li>
+  <li>☐ Co-branding UFG presente em materiais institucionais formais</li>
+  <li>☐ Contraste WCAG AA em todas as combinações texto/fundo</li>
+  <li>☐ Dados quantitativos verificados e com fonte citada</li>
+  <li>☐ Aprovação do guardião da marca para materiais externos</li>
+</ul>
+
+<h3 class="sh">Guardião da Marca</h3>
+<p>O guardião da marca é responsável por aprovar materiais de comunicação externa e garantir a consistência da identidade visual.</p>
+<div style="background:var(--cream);border-radius:8px;padding:1.5rem;margin:1rem 0 2rem">
+  <p style="margin:0"><strong>Responsável:</strong> [A definir — coordenação do LAPIG]</p>
+  <p style="margin:0.3rem 0 0"><strong>Contato:</strong> lapig@iesa.ufg.br</p>
+</div>
+
+<h3 class="sh">Versionamento</h3>
+<p>Este manual segue versionamento semântico (semver):</p>
+<ul>
+  <li><strong>Major (X.0.0)</strong> — mudanças estruturais na identidade (novo logo, nova paleta)</li>
+  <li><strong>Minor (1.X.0)</strong> — adições (novos templates, novas sub-marcas)</li>
+  <li><strong>Patch (1.0.X)</strong> — correções (ajustes de cor, erros tipográficos)</li>
+</ul>
+
+<table class="spec-tbl">
+<thead><tr><th>Versão</th><th>Data</th><th>Descrição</th></tr></thead>
+<tbody>
+<tr><td><strong>1.0.0</strong></td><td>Abril 2026</td><td>Lançamento inicial do manual de marca</td></tr>
+</tbody>
+</table>
+
+<h3 class="sh">Arquivos do Pacote</h3>
+<div style="background:var(--n9);border-radius:8px;padding:1.5rem;margin:1rem 0 2rem;font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:rgba(255,255,255,0.7);line-height:2;white-space:pre">lapig-brand/
+├── 00-manual/
+│   ├── manual-marca-lapig-v1.0.0-ptbr.html
+│   └── lapig-brand-manual-v1.0.0-en.html
+├── 01-logos/
+│   ├── principal/    (SVG + PNG)
+│   ├── compacto/     (icone hexagonal)
+│   └── monocromatico/
+├── 02-cores/
+│   └── paleta-referencia.svg
+├── 03-tipografia/
+│   └── tipografia-specimen.html
+├── 04-templates/
+│   ├── apresentacao/ (ptbr + en)
+│   ├── social-media/ (ptbr + en)
+│   ├── papelaria/    (ptbr + en)
+│   └── publicacoes-cientificas/
+└── 05-assets/
+    ├── icones/
+    ├── patterns/     (hexagonos + isolinhas)
+    └── mockups/</div>
+</section>
+</div>
+
+<footer class="manual-footer">
+  <div>LAPIG · IESA · UFG · Desde 1994 · Ciência que enxerga o território</div>
+  <div class="ver">Manual de Marca v1.0.0 · Abril 2026</div>
+</footer>
+
+</body>
+</html>

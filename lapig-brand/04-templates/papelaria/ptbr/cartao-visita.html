@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LAPIG — Cartao de Visita</title>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--g:#429B4D;--gd:#1B3A2A;--gold:#C4933F;--teal:#2A9D8F;--n8:#2D2D2A;--n5:#6B6B65;--n4:#8A8A82;--cream:#F6F1E7;--w:#FEFEFE}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:#e8e4dc;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;gap:3rem;padding:2rem}
+h2{font-family:'Exo 2',sans-serif;font-size:1.2rem;font-weight:700;color:var(--gd);letter-spacing:-0.02em}
+.label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--n4);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem}
+.cards{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center}
+
+.card{width:360px;height:200px;border-radius:6px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.08);position:relative}
+
+/* FRONT */
+.front{background:var(--w);padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Cg fill='none' stroke='%23429B4D' stroke-linecap='round'%3E%3Cpath d='M0,12 Q50,8 100,15 Q175,25 225,17 Q290,6 350,13 Q380,17 400,11' stroke-width='0.8' opacity='0.18'/%3E%3Cpath d='M0,32 Q55,25 110,35 Q180,48 230,37 Q295,24 355,33 Q382,38 400,30' stroke-width='1.0' opacity='0.22'/%3E%3Cpath d='M0,55 Q52,48 108,58 Q178,72 228,60 Q292,46 352,56 Q380,62 400,54' stroke-width='0.7' opacity='0.20'/%3E%3Cpath d='M0,78 Q48,72 105,82 Q175,95 225,83 Q288,70 348,80 Q378,85 400,77' stroke-width='1.1' opacity='0.25'/%3E%3Cpath d='M0,100 Q55,92 112,105 Q180,120 230,107 Q295,92 355,103 Q382,108 400,100' stroke-width='0.8' opacity='0.20'/%3E%3Cpath d='M0,125 Q50,118 108,128 Q178,142 228,130 Q292,116 352,126 Q380,132 400,124' stroke-width='1.2' opacity='0.28'/%3E%3Cpath d='M0,148 Q52,140 110,152 Q180,168 230,155 Q295,140 355,150 Q382,156 400,148' stroke-width='0.9' opacity='0.22'/%3E%3Cpath d='M0,172 Q55,165 112,175 Q182,190 232,178 Q298,164 358,174 Q384,180 400,172' stroke-width='1.0' opacity='0.24'/%3E%3Cpath d='M0,198 Q48,192 105,200 Q175,212 225,202 Q288,190 348,198 Q378,203 400,196' stroke-width='1.3' opacity='0.28'/%3E%3Cpath d='M0,222 Q52,215 110,225 Q180,238 230,226 Q295,214 355,224 Q382,228 400,220' stroke-width='0.8' opacity='0.20'/%3E%3Cpath d='M0,245 Q55,238 112,248 Q182,260 232,250 Q298,238 358,248 Q384,252 400,244' stroke-width='1.0' opacity='0.22'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:400px 250px}
+.front-top{display:flex;align-items:flex-start;justify-content:space-between}
+.front-logo{font-family:'DM Sans',sans-serif;font-weight:800;font-size:1.3rem;color:var(--n8);letter-spacing:-0.03em}
+.front-logo .dot{display:inline-block;width:6px;height:6px;background:var(--g);border-radius:50%;vertical-align:super;margin-left:-2px;margin-right:-1px;position:relative;top:-5px}
+.front-tagline{font-family:'Exo 2',sans-serif;font-style:italic;font-size:0.55rem;color:var(--n4);margin-top:0.2rem}
+.front-hex{width:24px;height:28px}
+.front-person{margin-top:auto}
+.front-name{font-weight:700;font-size:0.85rem;color:var(--n8)}
+.front-title{font-size:0.68rem;color:var(--n5);margin-top:0.1rem}
+.front-contact{display:flex;flex-direction:column;gap:0.15rem;margin-top:0.6rem}
+.front-contact span{font-size:0.6rem;color:var(--n4);font-family:'JetBrains Mono',monospace}
+
+/* BACK */
+.back{background:linear-gradient(145deg,var(--gd),#234a35);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Cg fill='none' stroke='%23ffffff' stroke-linecap='round'%3E%3Cpath d='M0,12 Q50,8 100,15 Q175,25 225,17 Q290,6 350,13 Q380,17 400,11' stroke-width='0.8' opacity='0.18'/%3E%3Cpath d='M0,32 Q55,25 110,35 Q180,48 230,37 Q295,24 355,33 Q382,38 400,30' stroke-width='1.0' opacity='0.22'/%3E%3Cpath d='M0,55 Q52,48 108,58 Q178,72 228,60 Q292,46 352,56 Q380,62 400,54' stroke-width='0.7' opacity='0.20'/%3E%3Cpath d='M0,78 Q48,72 105,82 Q175,95 225,83 Q288,70 348,80 Q378,85 400,77' stroke-width='1.1' opacity='0.25'/%3E%3Cpath d='M0,100 Q55,92 112,105 Q180,120 230,107 Q295,92 355,103 Q382,108 400,100' stroke-width='0.8' opacity='0.20'/%3E%3Cpath d='M0,125 Q50,118 108,128 Q178,142 228,130 Q292,116 352,126 Q380,132 400,124' stroke-width='1.2' opacity='0.28'/%3E%3Cpath d='M0,148 Q52,140 110,152 Q180,168 230,155 Q295,140 355,150 Q382,156 400,148' stroke-width='0.9' opacity='0.22'/%3E%3Cpath d='M0,172 Q55,165 112,175 Q182,190 232,178 Q298,164 358,174 Q384,180 400,172' stroke-width='1.0' opacity='0.24'/%3E%3Cpath d='M0,198 Q48,192 105,200 Q175,212 225,202 Q288,190 348,198 Q378,203 400,196' stroke-width='1.3' opacity='0.28'/%3E%3Cpath d='M0,222 Q52,215 110,225 Q180,238 230,226 Q295,214 355,224 Q382,228 400,220' stroke-width='0.8' opacity='0.20'/%3E%3Cpath d='M0,245 Q55,238 112,248 Q182,260 232,250 Q298,238 358,248 Q384,252 400,244' stroke-width='1.0' opacity='0.22'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:400px 250px}
+.back::after{content:'';position:absolute;bottom:0;left:0;right:0;height:50%;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Cpath d='M0,180 Q50,160 100,165 Q170,175 240,145 Q310,120 380,135 Q400,140 400,130' fill='none' stroke='%23C4933F' stroke-width='0.8' opacity='0.12'/%3E%3Cpath d='M0,150 Q60,125 130,138 Q200,148 280,115 Q350,88 400,105' fill='none' stroke='%23C4933F' stroke-width='0.6' opacity='0.08'/%3E%3C/svg%3E") no-repeat bottom/100%;pointer-events:none}
+.back-logo{font-family:'DM Sans',sans-serif;font-weight:800;font-size:1.8rem;color:var(--w);letter-spacing:-0.04em;position:relative;z-index:1}
+.back-logo .dot{display:inline-block;width:8px;height:8px;background:var(--w);border-radius:50%;vertical-align:super;margin-left:-3px;margin-right:-1px;position:relative;top:-7px}
+.back-tagline{font-family:'Exo 2',sans-serif;font-style:italic;font-size:0.72rem;color:var(--gold);margin-top:0.5rem;position:relative;z-index:1}
+.back-inst{font-size:0.55rem;color:rgba(255,255,255,0.35);margin-top:1.2rem;position:relative;z-index:1}
+</style>
+</head>
+<body>
+
+<div>
+  <div class="label">Cartão de visita — Frente / Front</div>
+  <div class="cards">
+    <div class="card front">
+      <div class="front-top">
+        <div>
+          <img src="../../../01-logos/principal/lapig-logo-v2-sem-subtitulo.png" alt="LAPIG" style="height:32px" class="front-logo">
+          <div class="front-tagline">Ciência que enxerga o território</div>
+        </div>
+        <svg class="front-hex" viewBox="0 0 24 28"><polygon points="12,1 23,7.5 23,20.5 12,27 1,20.5 1,7.5" fill="none" stroke="#429B4D" stroke-width="1" opacity="0.3"/></svg>
+      </div>
+      <div class="front-person">
+        <div class="front-name">Prof. Laerte Guimarães Ferreira</div>
+        <div class="front-title">Coordenador · LAPIG/IESA/UFG</div>
+        <div class="front-contact">
+          <span>laerte@ufg.br</span>
+          <span>+55 62 3521-1000</span>
+          <span>lapig.iesa.ufg.br</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="label">Cartão de visita — Verso / Back</div>
+  <div class="cards">
+    <div class="card back">
+      <img src="../../../01-logos/principal/lapig-logo-v2-sem-subtitulo.png" alt="LAPIG" style="height:36px" class="back-logo">
+      <div class="back-tagline">Ciência que enxerga o território</div>
+      <div class="back-inst">IESA · Universidade Federal de Goiás</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

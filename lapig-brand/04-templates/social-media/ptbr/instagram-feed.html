@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LAPIG — Instagram Feed Templates</title>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--g:#429B4D;--gd:#1B3A2A;--teal:#2A9D8F;--gold:#C4933F;--cream:#F6F1E7;--n8:#2D2D2A;--n5:#6B6B65;--n4:#8A8A82;--w:#FEFEFE}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:#d5d0c6;display:flex;flex-wrap:wrap;gap:3rem;padding:3rem;justify-content:center}
+.col{display:flex;flex-direction:column;gap:0.5rem;align-items:center}
+.label{font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:#8A8A82;letter-spacing:0.1em;text-transform:uppercase}
+.contour-bg{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Cg fill='none' stroke='%23429B4D' stroke-linecap='round'%3E%3Cpath d='M0,15 Q20,5 45,18 Q80,35 120,20 Q155,6 185,22 Q220,40 260,25 Q295,10 325,28 Q360,45 400,30' stroke-width='0.9' opacity='0.20'/%3E%3Cpath d='M0,38 Q22,25 50,42 Q85,62 125,45 Q160,28 195,48 Q230,68 270,50 Q305,32 340,52 Q375,70 400,55' stroke-width='1.1' opacity='0.24'/%3E%3Cpath d='M0,62 Q25,48 55,68 Q90,90 130,72 Q165,52 200,75 Q240,98 280,78 Q315,58 350,78 Q380,95 400,82' stroke-width='0.8' opacity='0.22'/%3E%3Cpath d='M0,88 Q20,72 48,92 Q85,115 125,95 Q160,75 195,100 Q235,125 275,105 Q310,82 345,105 Q378,125 400,110' stroke-width='1.3' opacity='0.28'/%3E%3Cpath d='M0,112 Q22,98 52,118 Q90,140 130,122 Q165,102 200,125 Q240,148 280,130 Q315,110 350,132 Q380,150 400,135' stroke-width='0.9' opacity='0.22'/%3E%3Cpath d='M0,138 Q25,122 55,142 Q92,165 132,148 Q168,128 205,152 Q245,175 285,155 Q320,135 355,158 Q385,178 400,162' stroke-width='1.4' opacity='0.30'/%3E%3Cpath d='M0,165 Q20,148 48,168 Q85,192 125,172 Q160,152 195,178 Q235,202 275,182 Q310,160 345,185 Q378,205 400,188' stroke-width='1.0' opacity='0.25'/%3E%3Cpath d='M0,192 Q22,175 52,195 Q90,218 130,200 Q165,180 200,205 Q240,228 280,210 Q315,190 350,212 Q380,230 400,215' stroke-width='1.2' opacity='0.26'/%3E%3Cpath d='M0,218 Q25,202 55,222 Q92,242 132,225 Q168,208 205,230 Q245,248 285,235 Q320,218 355,238 Q385,252 400,240' stroke-width='0.8' opacity='0.20'/%3E%3C/g%3E%3C/svg%3E");background-size:400px 250px}
+.contour-bg-w{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Cg fill='none' stroke='%23ffffff' stroke-linecap='round'%3E%3Cpath d='M0,15 Q20,5 45,18 Q80,35 120,20 Q155,6 185,22 Q220,40 260,25 Q295,10 325,28 Q360,45 400,30' stroke-width='0.9' opacity='0.20'/%3E%3Cpath d='M0,38 Q22,25 50,42 Q85,62 125,45 Q160,28 195,48 Q230,68 270,50 Q305,32 340,52 Q375,70 400,55' stroke-width='1.1' opacity='0.24'/%3E%3Cpath d='M0,62 Q25,48 55,68 Q90,90 130,72 Q165,52 200,75 Q240,98 280,78 Q315,58 350,78 Q380,95 400,82' stroke-width='0.8' opacity='0.22'/%3E%3Cpath d='M0,88 Q20,72 48,92 Q85,115 125,95 Q160,75 195,100 Q235,125 275,105 Q310,82 345,105 Q378,125 400,110' stroke-width='1.3' opacity='0.28'/%3E%3Cpath d='M0,112 Q22,98 52,118 Q90,140 130,122 Q165,102 200,125 Q240,148 280,130 Q315,110 350,132 Q380,150 400,135' stroke-width='0.9' opacity='0.22'/%3E%3Cpath d='M0,138 Q25,122 55,142 Q92,165 132,148 Q168,128 205,152 Q245,175 285,155 Q320,135 355,158 Q385,178 400,162' stroke-width='1.4' opacity='0.30'/%3E%3Cpath d='M0,165 Q20,148 48,168 Q85,192 125,172 Q160,152 195,178 Q235,202 275,182 Q310,160 345,185 Q378,205 400,188' stroke-width='1.0' opacity='0.25'/%3E%3Cpath d='M0,192 Q22,175 52,195 Q90,218 130,200 Q165,180 200,205 Q240,228 280,210 Q315,190 350,212 Q380,230 400,215' stroke-width='1.2' opacity='0.26'/%3E%3Cpath d='M0,218 Q25,202 55,222 Q92,242 132,225 Q168,208 205,230 Q245,248 285,235 Q320,218 355,238 Q385,252 400,240' stroke-width='0.8' opacity='0.20'/%3E%3C/g%3E%3C/svg%3E");background-size:400px 250px}
+
+.post{width:360px;height:360px;border-radius:6px;box-shadow:0 4px 20px rgba(0,0,0,0.1);overflow:hidden;position:relative}
+
+/* VARIANT A: EVENTO */
+.post-event{background:var(--cream);display:flex;flex-direction:column;padding:2rem}
+.post-event .tag{font-family:'JetBrains Mono',monospace;font-size:0.5rem;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.4rem}
+.post-event .tag::before{content:'';width:6px;height:6px;background:var(--teal);border-radius:50%}
+.post-event .series{font-family:'Exo 2',sans-serif;font-size:1.5rem;font-weight:800;color:var(--gd);letter-spacing:-0.03em;line-height:1.1}
+.post-event .series em{font-style:italic;font-weight:400;color:var(--g)}
+.post-event .topic{font-size:0.85rem;color:var(--n5);margin-top:0.6rem;line-height:1.5;flex:1}
+.post-event .details{display:flex;gap:1.5rem;margin-top:auto}
+.post-event .detail{display:flex;flex-direction:column;gap:0.1rem}
+.post-event .detail-label{font-family:'JetBrains Mono',monospace;font-size:0.45rem;color:var(--n4);letter-spacing:0.08em;text-transform:uppercase}
+.post-event .detail-value{font-size:0.75rem;font-weight:600;color:var(--gd)}
+.post-event .logo-bar{position:absolute;bottom:0;left:0;right:0;height:36px;background:var(--w);display:flex;align-items:center;padding:0 1.5rem;gap:1rem;border-top:1px solid rgba(0,0,0,0.04)}
+.post-event .logo-bar .logo{font-weight:800;font-size:0.7rem;color:var(--n8);letter-spacing:-0.02em}
+.post-event .logo-bar .logo .dot{display:inline-block;width:4px;height:4px;background:var(--g);border-radius:50%;vertical-align:super;margin-left:-1px;position:relative;top:-3px}
+.post-event .logo-bar .ufg{font-size:0.55rem;color:var(--n4);font-weight:600}
+/* Hex photo frame */
+.post-event .hex-frame{position:absolute;top:1.5rem;right:1.5rem;width:80px;height:92px}
+.post-event .hex-frame svg{width:100%;height:100%}
+
+/* VARIANT B: DADOS */
+.post-data{background:var(--gd);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2.5rem}
+.post-data .overline{font-family:'JetBrains Mono',monospace;font-size:0.5rem;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.5rem}
+.post-data .big-num{font-family:'JetBrains Mono',monospace;font-size:4rem;font-weight:600;color:var(--gold);line-height:1}
+.post-data .unit{font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:rgba(255,255,255,0.4);margin-top:0.3rem}
+.post-data .desc{font-size:0.85rem;color:rgba(255,255,255,0.55);margin-top:1.2rem;line-height:1.5;max-width:260px}
+.post-data .source{font-family:'JetBrains Mono',monospace;font-size:0.45rem;color:rgba(255,255,255,0.2);margin-top:auto;padding-top:1rem}
+.post-data .logo-bar{position:absolute;bottom:0;left:0;right:0;height:36px;background:rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem}
+.post-data .logo-bar .logo{font-weight:800;font-size:0.7rem;color:var(--w);letter-spacing:-0.02em}
+.post-data .logo-bar .logo .dot{display:inline-block;width:4px;height:4px;background:var(--w);border-radius:50%;vertical-align:super;margin-left:-1px;position:relative;top:-3px}
+.post-data .logo-bar .site{font-family:'JetBrains Mono',monospace;font-size:0.45rem;color:rgba(255,255,255,0.3)}
+
+/* VARIANT C: CURSO */
+.post-curso{background:var(--w);display:flex;flex-direction:column}
+.post-curso .header{background:var(--g);padding:1rem 1.5rem;display:flex;align-items:center;gap:0.6rem}
+.post-curso .header svg{width:20px;height:23px;flex-shrink:0}
+.post-curso .header .title{font-family:'Exo 2',sans-serif;font-weight:800;font-size:1.1rem;color:var(--w);letter-spacing:-0.02em}
+.post-curso .header .badge{font-family:'JetBrains Mono',monospace;font-size:0.45rem;background:rgba(255,255,255,0.2);color:var(--w);padding:0.15rem 0.4rem;border-radius:3px;letter-spacing:0.06em}
+.post-curso .body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+.post-curso .curso-title{font-family:'Exo 2',sans-serif;font-size:1.2rem;font-weight:700;color:var(--gd);line-height:1.2;letter-spacing:-0.02em}
+.post-curso .curso-desc{font-size:0.72rem;color:var(--n5);margin-top:0.5rem;line-height:1.5}
+.post-curso .instructor{display:flex;align-items:center;gap:0.6rem;margin-top:auto;padding-top:1rem}
+.post-curso .instructor-photo{width:40px;height:40px;background:var(--n4);border-radius:50%}
+.post-curso .instructor-name{font-weight:600;font-size:0.75rem;color:var(--n8)}
+.post-curso .instructor-role{font-size:0.6rem;color:var(--n4)}
+.post-curso .details{display:flex;gap:1rem;margin-top:0.8rem}
+.post-curso .logo-bar{height:36px;background:var(--cream);display:flex;align-items:center;padding:0 1.5rem;gap:0.8rem;border-top:1px solid rgba(0,0,0,0.04)}
+.post-curso .logo-bar .logo{font-weight:800;font-size:0.65rem;color:var(--n8);letter-spacing:-0.02em}
+.post-curso .logo-bar .logo .dot{display:inline-block;width:3px;height:3px;background:var(--g);border-radius:50%;vertical-align:super;margin-left:-1px;position:relative;top:-3px}
+.post-curso .logo-bar span{font-size:0.5rem;color:var(--n4)}
+</style>
+</head>
+<body>
+
+<!-- VARIANT A: EVENTO -->
+<div class="col">
+<div class="label">Variante A — Evento</div>
+<div class="post post-event contour-bg">
+  <div class="hex-frame">
+    <svg viewBox="0 0 80 92"><polygon points="40,2 76,24 76,68 40,90 4,68 4,24" fill="#ABABAA" stroke="#429B4D" stroke-width="1.5" opacity="0.5"/></svg>
+  </div>
+  <div class="tag">LAPIG Connect</div>
+  <div class="series">Café com bolo, ciência e <em>IA</em></div>
+  <div class="topic">Construção de agentes de IA para acessar bases no Zotero e automatizar revisões bibliográficas.</div>
+  <div class="details">
+    <div class="detail"><div class="detail-label">Data</div><div class="detail-value">12 mar., 17h</div></div>
+    <div class="detail"><div class="detail-label">Local</div><div class="detail-value">Sala Pastagem · LAPIG</div></div>
+    <div class="detail"><div class="detail-label">Modo</div><div class="detail-value">Híbrido</div></div>
+  </div>
+  <div class="logo-bar">
+    <img src="../../../01-logos/principal/lapig-logo-v2-sem-subtitulo.png" alt="LAPIG" style="height:20px">
+    <div class="ufg">UFG</div>
+  </div>
+</div>
+</div>
+
+<!-- VARIANT B: DADOS -->
+<div class="col">
+<div class="label">Variante B — Dados</div>
+<div class="post post-data contour-bg-w">
+  <div class="overline">Pastagem no Brasil</div>
+  <div class="big-num">155M</div>
+  <div class="unit">hectares</div>
+  <div class="desc">A pastagem plantada ocupa 18% do território nacional e corresponde a 56,7% de toda a área destinada à agropecuária no Brasil.</div>
+  <div class="source">Fonte: MapBiomas Coleção 10, 2024</div>
+  <div class="logo-bar">
+    <img src="../../../01-logos/principal/lapig-logo-v2-sem-subtitulo.png" alt="LAPIG" style="height:20px">
+    <div class="site">lapig.iesa.ufg.br</div>
+  </div>
+</div>
+</div>
+
+<!-- VARIANT C: CURSO -->
+<div class="col">
+<div class="label">Variante C — Curso</div>
+<div class="post post-curso">
+  <div class="header">
+    <svg viewBox="0 0 20 23"><polygon points="10,1 19,6 19,17 10,22 1,17 1,6" fill="none" stroke="#fff" stroke-width="1.2"/></svg>
+    <div class="title">GeoCursos</div>
+    <div class="badge">GRATUITO</div>
+  </div>
+  <div class="body">
+    <div class="curso-title">Aplicações da U-Net para Segmentação de Classes de Uso e Cobertura da Terra</div>
+    <div class="curso-desc">Formação prática em deep learning aplicado à classificação de imagens de satélite com redes neurais convolucionais.</div>
+    <div class="instructor">
+      <div class="instructor-photo"></div>
+      <div>
+        <div class="instructor-name">Tiago Gonçalves</div>
+        <div class="instructor-role">Graduado em Ciências da Computação · Esp. IA</div>
+      </div>
+    </div>
+    <div class="details">
+      <div class="detail"><div class="detail-label" style="font-family:'JetBrains Mono',monospace;font-size:0.42rem;color:#8A8A82;letter-spacing:0.06em;text-transform:uppercase">Data</div><div class="detail-value" style="font-size:0.7rem;font-weight:600;color:#1B3A2A">29-30/01 e 02/02</div></div>
+      <div class="detail"><div class="detail-label" style="font-family:'JetBrains Mono',monospace;font-size:0.42rem;color:#8A8A82;letter-spacing:0.06em;text-transform:uppercase">Modo</div><div class="detail-value" style="font-size:0.7rem;font-weight:600;color:#1B3A2A">Híbrido · Campus UFG</div></div>
+    </div>
+  </div>
+  <div class="logo-bar">
+    <img src="../../../01-logos/principal/lapig-logo-v2-sem-subtitulo.png" alt="LAPIG" style="height:20px">
+    <span>IESA</span><span>PROEC</span><span>UFG</span>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

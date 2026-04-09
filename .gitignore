@@ -1,0 +1,5 @@
+referencias/
+.claude/
+*.part
+.DS_Store
+Thumbs.db

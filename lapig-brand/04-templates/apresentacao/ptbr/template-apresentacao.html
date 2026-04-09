@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LAPIG — Template Apresentação 16:9</title>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--g:#429B4D;--gd:#1B3A2A;--gl:#6DB56A;--teal:#2A9D8F;--gold:#C4933F;--brown:#6B4C3B;--cream:#F6F1E7;--n8:#2D2D2A;--n5:#6B6B65;--n4:#8A8A82;--n3:#ABABAA;--w:#FEFEFE}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:#d5d0c6;display:flex;flex-direction:column;align-items:center;gap:3rem;padding:3rem 2rem}
+.label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:#8A8A82;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem}
+.contour-bg{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Cg fill='none' stroke='%23429B4D' stroke-linecap='round'%3E%3Cpath d='M0,15 Q20,5 45,18 Q80,35 120,20 Q155,6 185,22 Q220,40 260,25 Q295,10 325,28 Q360,45 400,30' stroke-width='0.9' opacity='0.20'/%3E%3Cpath d='M0,38 Q22,25 50,42 Q85,62 125,45 Q160,28 195,48 Q230,68 270,50 Q305,32 340,52 Q375,70 400,55' stroke-width='1.1' opacity='0.24'/%3E%3Cpath d='M0,62 Q25,48 55,68 Q90,90 130,72 Q165,52 200,75 Q240,98 280,78 Q315,58 350,78 Q380,95 400,82' stroke-width='0.8' opacity='0.22'/%3E%3Cpath d='M0,88 Q20,72 48,92 Q85,115 125,95 Q160,75 195,100 Q235,125 275,105 Q310,82 345,105 Q378,125 400,110' stroke-width='1.3' opacity='0.28'/%3E%3Cpath d='M0,112 Q22,98 52,118 Q90,140 130,122 Q165,102 200,125 Q240,148 280,130 Q315,110 350,132 Q380,150 400,135' stroke-width='0.9' opacity='0.22'/%3E%3Cpath d='M0,138 Q25,122 55,142 Q92,165 132,148 Q168,128 205,152 Q245,175 285,155 Q320,135 355,158 Q385,178 400,162' stroke-width='1.4' opacity='0.30'/%3E%3Cpath d='M0,165 Q20,148 48,168 Q85,192 125,172 Q160,152 195,178 Q235,202 275,182 Q310,160 345,185 Q378,205 400,188' stroke-width='1.0' opacity='0.25'/%3E%3Cpath d='M0,192 Q22,175 52,195 Q90,218 130,200 Q165,180 200,205 Q240,228 280,210 Q315,190 350,212 Q380,230 400,215' stroke-width='1.2' opacity='0.26'/%3E%3Cpath d='M0,218 Q25,202 55,222 Q92,242 132,225 Q168,208 205,230 Q245,248 285,235 Q320,218 355,238 Q385,252 400,240' stroke-width='0.8' opacity='0.20'/%3E%3C/g%3E%3C/svg%3E");background-size:400px 250px}
+.contour-bg-green{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Cg fill='none' stroke='%23429B4D' stroke-linecap='round'%3E%3Cpath d='M0,15 Q20,5 45,18 Q80,35 120,20 Q155,6 185,22 Q220,40 260,25 Q295,10 325,28 Q360,45 400,30' stroke-width='0.9' opacity='0.20'/%3E%3Cpath d='M0,38 Q22,25 50,42 Q85,62 125,45 Q160,28 195,48 Q230,68 270,50 Q305,32 340,52 Q375,70 400,55' stroke-width='1.1' opacity='0.24'/%3E%3Cpath d='M0,62 Q25,48 55,68 Q90,90 130,72 Q165,52 200,75 Q240,98 280,78 Q315,58 350,78 Q380,95 400,82' stroke-width='0.8' opacity='0.22'/%3E%3Cpath d='M0,88 Q20,72 48,92 Q85,115 125,95 Q160,75 195,100 Q235,125 275,105 Q310,82 345,105 Q378,125 400,110' stroke-width='1.3' opacity='0.28'/%3E%3Cpath d='M0,112 Q22,98 52,118 Q90,140 130,122 Q165,102 200,125 Q240,148 280,130 Q315,110 350,132 Q380,150 400,135' stroke-width='0.9' opacity='0.22'/%3E%3Cpath d='M0,138 Q25,122 55,142 Q92,165 132,148 Q168,128 205,152 Q245,175 285,155 Q320,135 355,158 Q385,178 400,162' stroke-width='1.4' opacity='0.30'/%3E%3Cpath d='M0,165 Q20,148 48,168 Q85,192 125,172 Q160,152 195,178 Q235,202 275,182 Q310,160 345,185 Q378,205 400,188' stroke-width='1.0' opacity='0.25'/%3E%3Cpath d='M0,192 Q22,175 52,195 Q90,218 130,200 Q165,180 200,205 Q240,228 280,210 Q315,190 350,212 Q380,230 400,215' stroke-width='1.2' opacity='0.26'/%3E%3Cpath d='M0,218 Q25,202 55,222 Q92,242 132,225 Q168,208 205,230 Q245,248 285,235 Q320,218 355,238 Q385,252 400,240' stroke-width='0.8' opacity='0.20'/%3E%3C/g%3E%3C/svg%3E");background-size:400px 250px}
+
+/* Slide frame */
+.slide{width:960px;height:540px;border-radius:4px;box-shadow:0 6px 30px rgba(0,0,0,0.12);overflow:hidden;position:relative;flex-shrink:0}
+
+/* ─── SLIDE 1: CAPA ─── */
+.s-cover{background:linear-gradient(160deg,var(--gd) 0%,#1a3528 100%);color:var(--w);display:flex;flex-direction:column;justify-content:center;padding:4rem 5rem}
+.s-cover .overline{font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1rem}
+.s-cover h1{font-family:'Exo 2',sans-serif;font-size:2.8rem;font-weight:900;line-height:1;letter-spacing:-0.04em;max-width:500px}
+.s-cover h1 em{font-style:italic;font-weight:400;color:var(--gl)}
+.s-cover .sub{font-size:0.95rem;color:rgba(255,255,255,0.5);margin-top:1rem;max-width:400px;line-height:1.6}
+.s-cover .bottom{position:absolute;bottom:0;left:0;right:0;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;background:rgba(0,0,0,0.15)}
+.s-cover .bottom .logo{font-weight:800;font-size:0.9rem;letter-spacing:-0.03em}
+.s-cover .bottom .logo .dot{display:inline-block;width:5px;height:5px;background:var(--w);border-radius:50%;vertical-align:super;margin-left:-1px;position:relative;top:-4px}
+.s-cover .bottom .meta{font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:rgba(255,255,255,0.35)}
+/* Contour lines decoration */
+.s-cover::after{content:'';position:absolute;bottom:48px;right:0;width:40%;height:60%;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cpath d='M300,280 Q240,250 180,265 Q120,280 60,250 Q20,235 0,240' fill='none' stroke='%23C4933F' stroke-width='0.8' opacity='0.12'/%3E%3Cpath d='M300,240 Q230,205 170,225 Q110,240 50,205 Q15,188 0,195' fill='none' stroke='%23C4933F' stroke-width='0.7' opacity='0.09'/%3E%3Cpath d='M300,195 Q220,158 160,180 Q100,195 40,158 Q10,140 0,148' fill='none' stroke='%23C4933F' stroke-width='0.6' opacity='0.06'/%3E%3C/svg%3E") no-repeat bottom right/100%;pointer-events:none}
+
+/* ─── SLIDE 2: CONTEUDO ─── */
+.s-content{background:var(--cream);display:grid;grid-template-columns:1fr 1fr;position:relative}
+.s-content .text-col{padding:3rem 2.5rem 3rem 3.5rem;display:flex;flex-direction:column;justify-content:center}
+.s-content .overline{font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.5rem}
+.s-content h2{font-family:'Exo 2',sans-serif;font-size:1.6rem;font-weight:800;color:var(--gd);letter-spacing:-0.03em;line-height:1.1;margin-bottom:0.8rem}
+.s-content p{font-size:0.8rem;color:var(--n5);line-height:1.7}
+.s-content .img-col{background:var(--n3);display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:var(--w);position:relative}
+.s-content .img-col::before{content:'Imagem / Mapa';position:absolute;font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:rgba(255,255,255,0.5)}
+.s-content .bottom{position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--g)}
+
+/* ─── SLIDE 3: DADOS ─── */
+.s-data{background:var(--gd);color:var(--w);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem}
+.s-data .overline{font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:2rem}
+.s-data .data-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;width:100%;max-width:750px}
+.s-data .data-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:1.5rem 1rem;position:relative;overflow:hidden}
+.s-data .data-card::before{content:'';position:absolute;top:-1px;left:0;right:0;height:3px;background:var(--gold)}
+.s-data .data-num{font-family:'JetBrains Mono',monospace;font-size:2rem;font-weight:600;color:var(--gold);line-height:1}
+.s-data .data-label{font-size:0.65rem;color:rgba(255,255,255,0.45);margin-top:0.5rem;line-height:1.3}
+.s-data .data-source{font-family:'JetBrains Mono',monospace;font-size:0.5rem;color:rgba(255,255,255,0.2);margin-top:2rem}
+
+/* ─── SLIDE 4: ENCERRAMENTO ─── */
+.s-close{background:linear-gradient(135deg,var(--g),var(--teal));color:var(--w);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative}
+.s-close .logo{font-weight:800;font-size:2.5rem;letter-spacing:-0.04em}
+.s-close .logo .dot{display:inline-block;width:11px;height:11px;background:var(--w);border-radius:50%;vertical-align:super;margin-left:-3px;position:relative;top:-9px}
+.s-close .tagline{font-family:'Exo 2',sans-serif;font-style:italic;font-size:1.3rem;color:rgba(255,255,255,0.8);margin-top:0.5rem}
+.s-close .website{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:rgba(255,255,255,0.4);margin-top:2rem;letter-spacing:0.05em}
+.s-close .inst{font-size:0.6rem;color:rgba(255,255,255,0.3);margin-top:0.5rem}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: CAPA -->
+<div class="label">Slide 1 — Capa</div>
+<div class="slide s-cover contour-bg">
+  <div class="overline">Programa de Pesquisa em Pastagem</div>
+  <h1>Monitoramento e Mapeamento de <em>Pastagens</em></h1>
+  <div class="sub">Mapeamento histórico das pastagens brasileiras com quantificação de vigor, biomassa e estoques de carbono.</div>
+  <div class="bottom">
+    <img src="../../../01-logos/principal/lapig-logo-v2-sem-subtitulo.png" alt="LAPIG" style="height:20px">
+    <div class="meta">IESA · UFG · lapig.iesa.ufg.br</div>
+  </div>
+</div>
+
+<!-- SLIDE 2: CONTEUDO -->
+<div class="label">Slide 2 — Conteúdo</div>
+<div class="slide s-content contour-bg-green">
+  <div class="text-col">
+    <div class="overline">Contexto</div>
+    <h2>155 milhões de hectares de pastagem no Brasil</h2>
+    <p>A pastagem plantada ocupa 18% do território nacional e corresponde a 56,7% de toda a área destinada à agropecuária. Cerca de 95% da carne bovina é produzida em pastagens, sustentando grande parte da cadeia de laticínios.</p>
+  </div>
+  <div class="img-col" style="background:linear-gradient(180deg,#8BA83C 0%,#C4B060 50%,#A08040 100%)"></div>
+  <div class="bottom"></div>
+</div>
+
+<!-- SLIDE 3: DADOS -->
+<div class="label">Slide 3 — Dados</div>
+<div class="slide s-data contour-bg">
+  <div class="overline">Dados de Impacto</div>
+  <div class="data-grid">
+    <div class="data-card">
+      <div class="data-num">155M</div>
+      <div class="data-label">hectares de pastagem mapeados</div>
+    </div>
+    <div class="data-card">
+      <div class="data-num">17</div>
+      <div class="data-label">países na rede MapBiomas</div>
+    </div>
+    <div class="data-card">
+      <div class="data-num">93.3%</div>
+      <div class="data-label">acurácia global Col. 10</div>
+    </div>
+    <div class="data-card">
+      <div class="data-num">85K</div>
+      <div class="data-label">amostras de validação</div>
+    </div>
+  </div>
+  <div class="data-source">Fonte: MapBiomas Coleção 10, 2024 · LAPIG/UFG</div>
+</div>
+
+<!-- SLIDE 4: ENCERRAMENTO -->
+<div class="label">Slide 4 — Encerramento</div>
+<div class="slide s-close contour-bg">
+  <img src="../../../01-logos/principal/lapig-logo-v2-sem-subtitulo.png" alt="LAPIG" style="height:20px">
+  <div class="tagline">Ciência que enxerga o território</div>
+  <div class="website">lapig.iesa.ufg.br</div>
+  <div class="inst">IESA · Universidade Federal de Goiás</div>
+</div>
+
+</body>
+</html>
