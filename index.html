@@ -44,7 +44,7 @@ body {
   padding: 4rem 2rem;
 }
 .hero-logo { margin-bottom: 2.5rem; }
-.hero-logo img { height: 64px; filter: brightness(0) invert(1); }
+.hero-logo img { height: 64px; }
 .hero-overline {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.65rem; font-weight: 600;
@@ -127,11 +127,11 @@ body {
 .card-icon {
   width: 44px; height: 44px; border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.2rem; margin-bottom: 1.25rem; flex-shrink: 0;
+  margin-bottom: 1.25rem; flex-shrink: 0;
 }
-.card-icon.green { background: rgba(66,155,77,0.12); }
-.card-icon.gold { background: rgba(196,147,63,0.12); }
-.card-icon.teal { background: rgba(42,157,143,0.12); }
+.card-icon.green { background: rgba(66,155,77,0.12); color: var(--g); }
+.card-icon.gold { background: rgba(196,147,63,0.12); color: var(--gold); }
+.card-icon.teal { background: rgba(42,157,143,0.12); color: var(--teal); }
 .card-title {
   font-family: 'Exo 2', sans-serif;
   font-size: 1.05rem; font-weight: 700;
@@ -226,7 +226,7 @@ footer .ver {
 <!-- ══════ HERO ══════ -->
 <header class="hero">
   <div class="hero-logo">
-    <img src="lapig-brand/01-logos/principal/lapig-logo-v2-sem-subtitulo.png" alt="LAPIG">
+    <img src="lapig-brand/01-logos/principal/lapig-logo-v2-en-com-subtitulo.png" alt="LAPIG">
   </div>
   <div class="hero-overline">Manual de Identidade Visual</div>
   <h1>Manual de Marca <span>LAPIG</span></h1>
@@ -254,14 +254,14 @@ footer .ver {
   <div class="card-grid" style="grid-template-columns: 1fr 1fr;">
     <a href="lapig-brand/00-manual/manual-marca-lapig-v1.0.0-ptbr.html" class="card">
       <div class="card-arrow">↗</div>
-      <div class="card-icon green">📖</div>
+      <div class="card-icon green"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
       <div class="card-title">Manual de Marca — PT-BR</div>
       <div class="card-desc">9 capítulos: plataforma de marca, logotipo, cores, tipografia, elementos gráficos, aplicações, sub-marcas, uso bilíngue e governança.</div>
       <div class="card-tag">Português</div>
     </a>
     <a href="lapig-brand/00-manual/lapig-brand-manual-v1.0.0-en.html" class="card">
       <div class="card-arrow">↗</div>
-      <div class="card-icon teal">📖</div>
+      <div class="card-icon teal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
       <div class="card-title">Brand Manual — EN</div>
       <div class="card-desc">Full 9-chapter brand manual in English: brand platform, logo, colors, typography, graphic elements, applications, sub-brands, bilingual usage and governance.</div>
       <div class="card-tag">English</div>
@@ -312,7 +312,7 @@ footer .ver {
 
   <a href="lapig-brand/02-cores/paleta-referencia.svg" class="card" style="max-width:400px">
     <div class="card-arrow">↗</div>
-    <div class="card-icon gold">🎨</div>
+    <div class="card-icon gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div>
     <div class="card-title">Paleta de Referência</div>
     <div class="card-desc">Cartão SVG com todas as cores, valores HEX/RGB/CMYK, Pantone e proporção de uso.</div>
     <div class="card-tag">SVG</div>
@@ -330,35 +330,35 @@ footer .ver {
   <div class="card-grid">
     <a href="lapig-brand/04-templates/apresentacao/ptbr/template-apresentacao.html" class="card">
       <div class="card-arrow">↗</div>
-      <div class="card-icon green">📊</div>
+      <div class="card-icon green"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg></div>
       <div class="card-title">Apresentação 16:9</div>
       <div class="card-desc">4 tipos de slide: capa, conteúdo, dados e encerramento. Com curvas de nível como background.</div>
       <div class="card-tag">Slides</div>
     </a>
     <a href="lapig-brand/04-templates/social-media/ptbr/instagram-feed.html" class="card">
       <div class="card-arrow">↗</div>
-      <div class="card-icon teal">📱</div>
+      <div class="card-icon teal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></div>
       <div class="card-title">Instagram Feed</div>
       <div class="card-desc">3 variantes: evento (LAPIG Connect), dados de impacto e curso (GeoCursos).</div>
       <div class="card-tag">Social Media</div>
     </a>
     <a href="lapig-brand/04-templates/papelaria/ptbr/cartao-visita.html" class="card">
       <div class="card-arrow">↗</div>
-      <div class="card-icon gold">💳</div>
+      <div class="card-icon gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></div>
       <div class="card-title">Cartão de Visita</div>
       <div class="card-desc">Frente e verso com logo oficial, curvas de nível e dados de contato.</div>
       <div class="card-tag">Papelaria</div>
     </a>
     <a href="lapig-brand/04-templates/papelaria/ptbr/assinatura-email.html" class="card">
       <div class="card-arrow">↗</div>
-      <div class="card-icon green">✉️</div>
+      <div class="card-icon green"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
       <div class="card-title">Assinatura de E-mail</div>
       <div class="card-desc">HTML compatível com clientes de e-mail corporativos. Pronto para copiar e colar.</div>
       <div class="card-tag">E-mail</div>
     </a>
     <a href="lapig-brand/05-assets/mockups/sinalizacao.html" class="card">
       <div class="card-arrow">↗</div>
-      <div class="card-icon teal">🏢</div>
+      <div class="card-icon teal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg></div>
       <div class="card-title">Sinalização Física</div>
       <div class="card-desc">Placa de porta, roll-up banner, camiseta e adesivo hexagonal.</div>
       <div class="card-tag">Físico</div>
@@ -377,35 +377,35 @@ footer .ver {
   <div class="card-grid">
     <a href="lapig-brand/05-assets/patterns/contour-lines.svg" class="card">
       <div class="card-arrow">↗</div>
-      <div class="card-icon green">〰️</div>
+      <div class="card-icon green"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></div>
       <div class="card-title">Curvas de Nível — Verde</div>
       <div class="card-desc">Background principal da marca. Linhas topográficas com ondulações acentuadas que nunca se cruzam.</div>
       <div class="card-tag">Background · SVG</div>
     </a>
     <a href="lapig-brand/05-assets/patterns/contour-lines-gold.svg" class="card">
       <div class="card-arrow">↗</div>
-      <div class="card-icon gold">〰️</div>
+      <div class="card-icon gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></div>
       <div class="card-title">Curvas de Nível — Dourado</div>
       <div class="card-desc">Variante em dourado para fundos escuros e contextos terrosos.</div>
       <div class="card-tag">Background · SVG</div>
     </a>
     <a href="lapig-brand/05-assets/patterns/hexagon-grid.svg" class="card">
       <div class="card-arrow">↗</div>
-      <div class="card-icon teal">⬡</div>
+      <div class="card-icon teal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
       <div class="card-title">Grid Hexagonal — Claro</div>
       <div class="card-desc">Hexágonos para recortes de imagem, molduras e ícones. Não usar como background.</div>
       <div class="card-tag">Moldura · SVG</div>
     </a>
     <a href="lapig-brand/05-assets/patterns/hexagon-grid-dark.svg" class="card">
       <div class="card-arrow">↗</div>
-      <div class="card-icon teal">⬡</div>
+      <div class="card-icon teal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
       <div class="card-title">Grid Hexagonal — Escuro</div>
       <div class="card-desc">Versão para fundos escuros. Uso exclusivo como moldura ou recorte.</div>
       <div class="card-tag">Moldura · SVG</div>
     </a>
     <a href="lapig-brand/05-assets/patterns/hex-contour-combined.svg" class="card">
       <div class="card-arrow">↗</div>
-      <div class="card-icon gold">◈</div>
+      <div class="card-icon gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41l-7.59-7.59a2.41 2.41 0 0 0-3.41 0Z"/></svg></div>
       <div class="card-title">Composição Completa</div>
       <div class="card-desc">Curvas de nível + hexágonos pontuais. Referência visual do sistema gráfico completo.</div>
       <div class="card-tag">Referência · SVG</div>
